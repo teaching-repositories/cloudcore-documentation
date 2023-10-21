@@ -1,0 +1,1956 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://james-willett.github.io/mkdocs-material-youtube-tutorial/policies/ccm/">
+      
+      
+        <link rel="prev" href="../breach/">
+      
+      
+        <link rel="next" href="../compliance-audit/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>Configuration and Change Management - CloudCore Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configuration-and-change-management" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CloudCore Documentation" class="md-header__button md-logo" aria-label="CloudCore Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CloudCore Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configuration and Change Management
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      CloudCore
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../interviews/interview-CISO/" class="md-tabs__link">
+        Interviews
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Policies
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../support/ISMS/" class="md-tabs__link">
+        Support
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CloudCore Documentation" class="md-nav__button md-logo" aria-label="CloudCore Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    CloudCore Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        CloudCore
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Interviews
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Interviews
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-CISO/" class="md-nav__link">
+        interview CISO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-data-protection-officer/" class="md-nav__link">
+        Interview data protection officer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-database-administrator/" class="md-nav__link">
+        Interview database administrator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-facilities-manager/" class="md-nav__link">
+        Interview facilities manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-helpdesk/" class="md-nav__link">
+        Interview helpdesk
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-infromation-security-manager/" class="md-nav__link">
+        Interview infromation security manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-legal/" class="md-nav__link">
+        Interview legal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-network-engineer/" class="md-nav__link">
+        Interview network engineer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-system-administrator/" class="md-nav__link">
+        Interview system administrator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-typicall-employee/" class="md-nav__link">
+        Interview typicall employee
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-vendor/" class="md-nav__link">
+        Interview vendor
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Policies
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Policies
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        CloudCore Security Policies, Standards, and Procedures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../access/" class="md-nav__link">
+        Access
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../approved-software/" class="md-nav__link">
+        Approved software
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../approved-vendors/" class="md-nav__link">
+        Approved vendors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../asset-mgmt/" class="md-nav__link">
+        Asset Inventory Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bcdr/" class="md-nav__link">
+        Business Continuity and Disaster Recovery
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../breach/" class="md-nav__link">
+        Breach Investigation and Notification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Configuration and Change Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Configuration and Change Management
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#policy-statements" class="md-nav__link">
+    Policy Statements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controls-and-procedures" class="md-nav__link">
+    Controls and Procedures
+  </a>
+  
+    <nav class="md-nav" aria-label="Controls and Procedures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-management-processes" class="md-nav__link">
+    Configuration Management Processes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-monitoring-and-auditing" class="md-nav__link">
+    Configuration Monitoring and Auditing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#production-systems-provisioning" class="md-nav__link">
+    Production Systems Provisioning
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-endpoint-security-controls-and-configuration" class="md-nav__link">
+    User Endpoint Security Controls and Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-hardening-guidelines-and-processes" class="md-nav__link">
+    Server Hardening Guidelines and Processes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-and-provisioning-of-management-systems" class="md-nav__link">
+    Configuration and Provisioning of Management Systems
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-and-management-of-network-controls" class="md-nav__link">
+    Configuration and Management of Network Controls
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provisioning-aws-accounts" class="md-nav__link">
+    Provisioning AWS Accounts
+  </a>
+  
+    <nav class="md-nav" aria-label="Provisioning AWS Accounts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aws-account-structure-organization" class="md-nav__link">
+    AWS Account Structure / Organization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infrastructure-as-code" class="md-nav__link">
+    Infrastructure-as-Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-change-management-for-deploys-to-aws" class="md-nav__link">
+    Automated change management for deploys to AWS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-management-procedures" class="md-nav__link">
+    Patch Management Procedures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#production-deploy-code-promotion-processes" class="md-nav__link">
+    Production Deploy / Code Promotion Processes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emergency-change" class="md-nav__link">
+    Emergency Change
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compliance-audit/" class="md-nav__link">
+        Compliance Audits and External Communications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cookie-policy/" class="md-nav__link">
+        Cookie policy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-mgmt/" class="md-nav__link">
+        Data Management Policy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-protection/" class="md-nav__link">
+        Data Protection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../definitions/" class="md-nav__link">
+        Definitions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../employee-handbook/" class="md-nav__link">
+        Employee handbook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../facility/" class="md-nav__link">
+        Facility Access and Physical Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gdpr-dpa/" class="md-nav__link">
+        Gdpr dpa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hipaa-baa/" class="md-nav__link">
+        Hipaa baa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hipaa-mapping/" class="md-nav__link">
+        Hipaa mapping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hr/" class="md-nav__link">
+        HR and Personnel Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ir/" class="md-nav__link">
+        Incident Response
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mdm/" class="md-nav__link">
+        Mobile Device Security and Storage Media Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model/" class="md-nav__link">
+        Security Architecture and Operating Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nist-mapping/" class="md-nav__link">
+        Nist mapping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policy-mgmt/" class="md-nav__link">
+        Policy Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../privacy-policy/" class="md-nav__link">
+        Privacy policy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../privacy/" class="md-nav__link">
+        Privacy and Consent
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../program/" class="md-nav__link">
+        Security Program Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rar/" class="md-nav__link">
+        Roles, Responsibilities and Training
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref/" class="md-nav__link">
+        Addendum and References
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../risk-mgmt/" class="md-nav__link">
+        Risk Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdlc/" class="md-nav__link">
+        Secure Software Development and Product Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-audit/" class="md-nav__link">
+        System Audits, Monitoring and Assessments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../threat/" class="md-nav__link">
+        Threat Detection and Prevention
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vendor/" class="md-nav__link">
+        Third Party Security, Vendor Risk Management and Systems/Services Acquisition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vuln-mgmt/" class="md-nav__link">
+        Vulnerability Management
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Support
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/ISMS/" class="md-nav__link">
+        CloudCore Networks Information Security Management System
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/Preparing%20ISO%2027001/" class="md-nav__link">
+        Preparing ISO 27001
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/Risk%20Register/" class="md-nav__link">
+        Risk Register
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/Training/" class="md-nav__link">
+        Training
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/network-logical/" class="md-nav__link">
+        Network logical
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/org-chart-names-full/" class="md-nav__link">
+        Org chart names full
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="configuration-and-change-management">Configuration and Change Management</h1>
+<p><code>2023.1</code></p>
+<p>CloudCore standardizes and automates configuration management through the use of
+automation scripts as well as documentation of all changes to production systems
+and networks. Automation tools such as Chef, Salt, and Terraform automatically
+configure all CloudCore systems according to established and tested policies, and
+are used as part of our Disaster Recovery plan and process.</p>
+<h2 id="policy-statements">Policy Statements</h2>
+<p>CloudCore policy requires that:</p>
+<p>(a) All production changes, including but not limited to software deployment,
+feature toggle enablement, network infrastructure changes, and access control
+authorization updates, must be invoked through approved change management
+process.</p>
+<p>(b) Each production change must maintain complete traceability to fully document
+the request, including requestor, date/time of change, actions taken and
+results.</p>
+<p>(c) Each production change must be fully tested prior to implementation.</p>
+<p>(d) Each production change must include a rollback plan to back out the change
+in the event of failure.</p>
+<p>(e) Each production change must include proper approval.</p>
+<ul>
+<li>The approvers are determined based on the type of change.</li>
+<li>Approvers must be someone other than the author/executor of the change.</li>
+<li>Approvals may be automatically granted if certain criteria is met.
+    The auto-approval criteria must be pre-approved by the Security Officer and
+    fully documented and validated for each request.</li>
+</ul>
+<h2 id="controls-and-procedures">Controls and Procedures</h2>
+<h3 id="configuration-management-processes">Configuration Management Processes</h3>
+<ol>
+<li>
+<p>Configuration management is automated using industry-recognized tools like
+   Chef, Salt and Terraform to enforce secure configuration standards.</p>
+</li>
+<li>
+<p>All changes to production systems, network devices, and firewalls are
+   reviewed and approved by Security team before they are implemented to assure
+   they comply with business and security requirements.</p>
+</li>
+<li>
+<p>All changes to production systems are tested before they are implemented in
+   production.</p>
+</li>
+<li>
+<p>Implementation of approved changes are only performed by authorized
+   personnel.</p>
+</li>
+<li>
+<p>Tooling is used to generate an up to date system inventory.</p>
+<ul>
+<li>All systems are categorized and labeled by their corresponding
+  environment, such as <em>dev</em>, <em>test</em>, and <em>prod</em>.</li>
+<li>All systems are classified and labeled based on the data they store or
+  process, according to <a href="assets/data-classification-and-handling.pdf">CloudCore data classification
+  model</a>.</li>
+<li>The Security team maintains automation which monitors all changes to IT
+  assets, generates inventory lists, using automatic IT assets discovery,
+  and services provided by each cloud provider.</li>
+<li>IT assets database is used to generate the diagrams and asset lists
+  required by the Risk Assessment phase of CloudCore's
+  <a href="../risk-mgmt/">Risk Management procedures</a></li>
+<li>CloudCore Change Management process ensures that all asset inventory
+  created by automation is reconciled against real changes to production
+  systems. This process includes periodic manual audits and approvals.</li>
+<li>During each change implementation, the change is reviewed and verified by
+  the target asset owner as needed.</li>
+</ul>
+</li>
+<li>
+<p>CloudCore uses the <a href="http://iase.disa.mil/stigs/">Security Technical Implementation Guides
+   (STIGs)</a> published by the Defense Information
+   Systems Agency as a baseline for hardening systems.</p>
+<ul>
+<li>Windows-based systems use a baseline Active Directory group policy
+  configuration in conjunction with the DISA STIGs.</li>
+<li>Linux-based systems use Red Hat Enterprise Linux STIG as a guideline for
+  implementation.</li>
+<li>EC2 instances in AWS are provisioned using only hardened and approved
+  Amazon Machine Images (AMIs).</li>
+<li>Docker containers are launched using only approved Docker images that have
+  been through security testing.</li>
+</ul>
+</li>
+<li>
+<p>All IT assets in CloudCore have time synchronized to a single
+   authoritative source.</p>
+<ul>
+<li>On-premise systems are configured to point to an internal NTP server.</li>
+<li>The internal NTP server and all AWS instances are pointing to the same set
+  of ntp.org servers.</li>
+</ul>
+</li>
+<li>
+<p>All frontend functionality (e.g. user dashboards and portals) is separated
+   from backend (e.g. database and app servers) systems by being deployed on
+   separate servers or containers.</p>
+</li>
+<li>
+<p>All software and systems are required to complete full-scale testing before
+   being promoted to production.</p>
+</li>
+<li>
+<p>All code changes are reviewed to assure software code quality, while in
+   development, to proactively detect potential security issues using
+   pull-requests and static code analysis tools.  More details can be found in
+   the <em>Software Release / Code Promotion</em> section.</p>
+</li>
+</ol>
+<h3 id="configuration-monitoring-and-auditing">Configuration Monitoring and Auditing</h3>
+<p>All infrastructure and system configurations, including all software-defined
+sources, are centrally aggregated to a configuration management database (CMDB)
+-- JupiterOne.</p>
+<p>Configuration auditing rules are created according to established baseline,
+approved configuration standards and control policies. Deviations,
+misconfigurations, or configuration drifts are detected by these rules and
+alerted to the security team.</p>
+<h3 id="production-systems-provisioning">Production Systems Provisioning</h3>
+<ol>
+<li>
+<p>Before provisioning any systems, a request must be created and approved in
+   the  Production Change Management (PRODCM) project.</p>
+<ul>
+<li>access requires authenticated users.</li>
+<li>Security grants access to the  PRODCM project following the procedures
+  covered in the <a href="../access/">Access Establishment and Modification
+  section</a>.</li>
+</ul>
+</li>
+<li>
+<p>The security team must approve the provisioning request before any new system
+   can be provisioned, unless a pre-approved automation process is followed.</p>
+</li>
+<li>
+<p>Once provisioning has been approved, the implementer must configure the new
+   system according to the standard baseline chosen for the system's role.</p>
+</li>
+<li>
+<p>If the system will be used to store sensitive information, the implementer
+   must ensure the volume containing this sensitive data is encrypted.</p>
+</li>
+<li>
+<p>Sensitive data in motion must always be encrypted.</p>
+</li>
+<li>
+<p>A security analysis is conducted once the system has been provisioned.  This
+   can be achieved either via automated configuration/vulnerability scans or
+   manual inspection by the security team. Verifications include, but is not
+   limited to:</p>
+<ul>
+<li>Removal of default users used during provisioning.</li>
+<li>Network configuration for system.</li>
+<li>Data volume encryption settings.</li>
+<li>Intrusion detection and virus scanning software installed.</li>
+</ul>
+</li>
+<li>
+<p>The new system is fully promoted into production upon successful verification
+   against corresponding CloudCore standards and change request approvals.</p>
+</li>
+</ol>
+<h3 id="user-endpoint-security-controls-and-configuration">User Endpoint Security Controls and Configuration</h3>
+<ol>
+<li>
+<p>Employee laptops, including Windows, Mac, and Linux systems, are configured
+   either</p>
+<ul>
+<li>Manually by IT or the device owner; or</li>
+<li>Automatically using a configuration management tool or equivalent scripts.</li>
+</ul>
+</li>
+<li>
+<p>The following security controls are applied at the minimum:</p>
+<ul>
+<li>Disk encryption</li>
+<li>Unique user accounts and strong passwords</li>
+<li>Approved NTP servers</li>
+<li>Approved security agents</li>
+<li>Locking after 2 mins of inactivity</li>
+<li>Auto-update of security patches</li>
+</ul>
+</li>
+<li>
+<p>The security configurations on all end-user systems are inspected by Security
+   through either a manual periodic review or an automated compliance auditing
+   tool.</p>
+</li>
+</ol>
+<h3 id="server-hardening-guidelines-and-processes">Server Hardening Guidelines and Processes</h3>
+<ol>
+<li>
+<p><strong>Linux System Hardening:</strong> Linux systems have their baseline security
+   configuration applied via automation tools. These tools cover:</p>
+<ul>
+<li>Ensuring that the machine is up-to-date with security patches and is
+  configured to apply patches in accordance with our policies.</li>
+<li>Stopping and disabling any unnecessary OS services.</li>
+<li>Apply applicable DISA STIGs to OS and applications.</li>
+<li>Configuring 15-minute session inactivity timeouts for SSH sessions.</li>
+<li>Installing and configuring the virus scanner.</li>
+<li>Installing and configuring the NTP daemon, including ensuring that
+  modifying system time cannot be performed by unprivileged users.</li>
+<li>Configuring disk volumes for providers that do not have native support for
+  encrypted data volumes, including ensuring that encryption keys are
+  protected from unauthorized access.</li>
+<li>Configuring authentication to the centralized Directory Services servers.</li>
+<li>Configuring audit logging as described in the <a href="../system-audit/">Auditing Policy
+  section</a>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Windows System Hardening:</strong> Windows systems have their baseline security
+   configuration applied via the combination of Group Policy settings and/or
+   automation scripts. These baseline settings cover:</p>
+<ul>
+<li>Joining the Windows Domain Controller and applying the Active Directory
+  Group Policy configuration (for AD-managed systems only).</li>
+<li>Ensuring that the machine is up-to-date with security patches and is
+  configured to apply patches in accordance with our policies.</li>
+<li>Apply applicable DISA STIGs to OS and applications.</li>
+<li>Stopping and disabling any unnecessary OS services.</li>
+<li>Configuring session inactivity timeouts.</li>
+<li>Installing and configuring security protection agents such as anti-virus
+  scanner.</li>
+<li>Configuring transport encryption according to the requirements described
+  in the <a href="../mdm/">Mobile Device Security and Disposable Media Management
+  section</a>.</li>
+<li>Configuring the system clock to point to approved NTP servers and ensuring
+  that modifying system time cannot be performed by unprivileged users.</li>
+<li>Configuring audit logging as described in the <a href="../system-audit/">Auditing Policy
+  section</a>.</li>
+</ul>
+</li>
+<li>
+<p>Any additional configuration changes applied to hardened Windows systems must
+   be clearly documented by the implementer and reviewed by the Security team.</p>
+</li>
+</ol>
+<h3 id="configuration-and-provisioning-of-management-systems">Configuration and Provisioning of Management Systems</h3>
+<ol>
+<li>
+<p>Provisioning management systems such as configuration management servers,
+   remote access infrastructure, directory services, or monitoring systems follows
+   the same procedure as provisioning a production system.</p>
+</li>
+<li>
+<p>Critical infrastructure roles applied to new systems must be clearly
+   documented by the implementer in the change request.</p>
+</li>
+</ol>
+<h3 id="configuration-and-management-of-network-controls">Configuration and Management of Network Controls</h3>
+<p>All network devices and controls on a sensitive network are configured such
+that:</p>
+<ul>
+<li>
+<p>Vendor provided default configurations are modified securely, including</p>
+</li>
+<li>
+<p>default encryption keys,</p>
+</li>
+<li>default SNMP community strings, if applicable,</li>
+<li>default passwords/passphrases, and</li>
+<li>
+<p>other security-related vendor defaults, if applicable.</p>
+</li>
+<li>
+<p>Encryption keys and passwords are changed anytime anyone with knowledge of the
+  keys or passwords leaves the company or changes positions.</p>
+</li>
+<li>
+<p>Traffic filtering (e.g. firewall rules) and inspection (e.g. Network IDS/IPS
+  or AWS VPC flow logs) are enabled.</p>
+</li>
+<li>
+<p>An up-to-date network diagram is maintained.</p>
+</li>
+</ul>
+<p>In AWS, network controls are implemented using Virtual Private Clouds (VPCs) and
+Security Groups. The configurations are managed as code and stored in approved
+repos. All changes to the configuration follow the defined code review, change
+management and production deployment approval process.</p>
+<h3 id="provisioning-aws-accounts">Provisioning AWS Accounts</h3>
+<h4 id="aws-account-structure-organization">AWS Account Structure / Organization</h4>
+<p>CloudCore maintains a single Organization in AWS, maintained in a
+top-level AWS account (master). Sub-accounts are connected that each hosts
+separate workloads and resources in its own sandboxed environment. The master
+account itself handles aggregated billing for all connected sub-accounts but
+does not host any workload, service or resource, with the exception of DNS
+records for CloudCore root domain, using AWS Route53 service. DNS
+records for subdomains are maintained in the corresponding sub-accounts.</p>
+<p>Access to each account is funneled through our designated SSO provider, which
+establishes a trust relationship to a set of predefined roles in the master
+account. Once authenticated, a user then leverages AWS IAM Assume Role
+capability to switch to a sub-account to access services and resources.</p>
+<p>The account and network structure looks like the following:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>SSO/IdP ── CloudCore-master
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>            │  └── billing and root DNS records only
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>            │
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>            ├── CloudCore-dev
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>            │    └── VPC
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>            │        └── Subnets
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>            │             └── Security-Groups
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>            │                  └── EC2 instances
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>            │                       └── Docker containers
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>            │            
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>            ├── CloudCore-test
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>            │    └── VPC
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>            │         └── Subnets
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>            │              └── Security-Groups
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>            │                   └── EC2 instances
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>            │                        └── Docker containers
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>            │
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>            ├── CloudCore-infra
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>            │    └── VPC
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>            │         └── Subnets
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>            │              └── Security-Groups
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>            │                   └── EC2 instances
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>            │                        └── Docker containers
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>            │
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>            ├── CloudCore-prod-us1
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>            │    └── VPC
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>            │         └── Subnets
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>            │              └── Security-Groups
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>            │                   └── EC2 instances
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>            │                        └── Docker containers
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>            │
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>            ├── CloudCore-prod-us2
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>            │
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>            ...
+</code></pre></div>
+<h4 id="infrastructure-as-code">Infrastructure-as-Code</h4>
+<p>CloudCore AWS environments and infrastructure are managed as code.
+Provisioning is accomplished using a set of automation scripts and Terraform
+code.  Each new environment is created as a sub-account connected to
+<code>CloudCore-master</code>.  The creation and provisioning of a new account
+follows the instructions documented in the Bootstrap a new AWS environment page
+of the development wiki.</p>
+<h3 id="automated-change-management-for-deploys-to-aws">Automated change management for deploys to AWS</h3>
+<p>The CloudCore Continuous Delivery Pipeline automates creation and
+validation of change requests. This is done in a 3-step process:</p>
+<ol>
+<li>
+<p><strong>Create/Validate Change Request Ticket</strong></p>
+<p>is used for continuous delivery (build and deploy), and we employ
+- automation such that:</p>
+<ul>
+<li>Whenever deployment to a controlled environment (e.g. production accounts
+  and infrastructure account) is requested, the  job will check for
+  an approved PRODCM ticket, or create a new ticket if not found.</li>
+<li>The automation code will attempt to automatically populate the required
+  data for the PRODCM ticket (see list above).</li>
+<li>If the data cannot be automatically populated,  may pause the job
+  and prompt the user for manual input.</li>
+<li>Job will be paused until the request is approved or canceled (rejected).
+  Before continuing to deployment,  will validate the change
+  request's build job identifier, build number and source code branch.</li>
+</ul>
+</li>
+<li>
+<p><strong>Detect Change Details and Obtain Approval</strong></p>
+<p>A separate <code>change-management-bot</code> is implemented to provide additional
+details to assist/automate the ticket approval process:</p>
+<ul>
+<li>Whenever a PRODCM ticket is created, the bot is triggered via a  webhook.</li>
+<li>
+<p>The bot is configured to examine the following:</p>
+<ul>
+<li>Look for all the code changes since the last approved PRODCM ticket.</li>
+<li>Check that all code commits have been approved by a reviewer other
+  than the author, except for a version bump.</li>
+<li>Ensure that security scanning has been completed for this build and
+  no blocking issue is found.</li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The following practices will fail this validation and result in
+manual processing, therefore should be avoided:</p>
+<ul>
+<li>squashing commits on PR merges</li>
+<li>commits after PR approval without re-approval</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Details of the analysis are posted to the PRODCM  ticket.</p>
+</li>
+<li>
+<p>When all the required checks pass validation, the bot recommends approval.
+  The cm-bot may be configured to automatically approve the ticket if all of
+  the required conditions above (and future ones) are met.  Additionally,
+  a manual review / approval is always required in the following conditions:</p>
+<ul>
+<li>This is the first prod deploy with no prior approval history</li>
+<li>A related CM ticket / deploy of the same project is pending</li>
+</ul>
+</li>
+<li>
+<p>If human approvals are needed, the required approvers will review the
+  details and approve/decline accordingly.</p>
+</li>
+<li>
+<p>Random inspections of automatically approved tickets are performed by the
+  security team monthly to ensure the automation functions properly.</p>
+</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<ol>
+<li>Note that the above flow does not catch weaknesses in design, and
+therefore does not replace the need for threat modeling and security
+review in the design phase.</li>
+<li>Additional requirements may be added later as the process continues
+to mature.</li>
+</ol>
+</div>
+</li>
+<li>
+<p><strong>Detect Risky Changes, Deploy and Close</strong></p>
+<p>job proceeds only with an approved and validated PRODCM ticket.</p>
+<ul>
+<li>
+<p>During production deploys, a <code>terraform plan</code> is always performed first to
+  detect risky changes.</p>
+</li>
+<li>
+<p>Examples of security-related or risky changes include:</p>
+<ul>
+<li>Change to "policy" attribute of resource (aws_s3_bucket.policy, aws_kms_key.policy)</li>
+<li>Change to IAM policy, role, user or group</li>
+<li>Attach/detach policy</li>
+<li>Change/delete to security group</li>
+<li>Anything is deleted (in prod, deletes should be unusual so they should be manually reviewed)</li>
+</ul>
+</li>
+<li>
+<p>If risky changes are detected, the deploy is paused and the PRODCM ticket
+  is updated to require manual review before continuing.</p>
+</li>
+<li>
+<p>Once a deploy is completed, the PRODCM ticket is automatically resolved
+  and closed.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="patch-management-procedures">Patch Management Procedures</h3>
+<p><strong>Local Systems</strong></p>
+<p>CloudCore uses automated tooling to ensure systems are up-to-date
+with the latest security patches.</p>
+<ul>
+<li>
+<p>On local Linux and Windows systems, the unattended-upgrades tool is used to
+  apply security patches in phases.</p>
+<ul>
+<li>High Risk security patches are automatically applied as they are released</li>
+<li>Monthly system patching for regular applications are applied as needed.</li>
+<li>Snapshotting of a system will take place before an update is applied.</li>
+<li>Once the update is deemed stable the snapshot will be removed.</li>
+<li>In case of failure of the update the snapshot will be rolled back.</li>
+<li>If the staging systems function properly after the two-week testing
+  period, the security team will promote that snapshot into the mirror used
+  by all production systems. These patches will be applied to all production
+  systems during the next nightly patch run.</li>
+<li>The patching process may be expedited by the Security team</li>
+<li>On Windows systems, the baseline Group Policy setting configures Windows
+  Update to implement the patching policy.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Cloud Resources</strong></p>
+<p>CloudCore follows a "cattle-vs-pets" methodology to keep the
+resources in the cloud environments immutable and up-to-date with security
+patches.</p>
+<ul>
+<li>
+<p>AWS Elastic Container Service (ECS) is used to dynamically manage container
+  resources based on demand.  </p>
+</li>
+<li>
+<p>Engineering team builds security-approved AMI from the latest AWS optimized
+  Amazon Machine Image (AMI) to include required security agent.</p>
+</li>
+<li>
+<p>The security agents installed on the security-approved AMIs continuously scan
+  for and report new vulnerabilities.</p>
+</li>
+<li>
+<p>The custom AMIs are automatically rebuilt from the latest AWS AMIs weekly to
+  include the latest security patches.</p>
+</li>
+</ul>
+<p><strong>User Endpoints</strong></p>
+<p>CloudCore requires auto-update for security patches to be enabled for
+all user endpoints, including laptops and workstations.</p>
+<ul>
+<li>The auto-update configuration and update status on all end-user systems are
+  inspected by Security through either manual periodic audits or automated
+  compliance auditing agents installed on the endpoints.</li>
+</ul>
+<h3 id="production-deploy-code-promotion-processes">Production Deploy / Code Promotion Processes</h3>
+<p>In order to promote changes into Production, a valid and approved Change Request
+(CR) is required. It can be created in the [Change Management System/Portal][1]
+which implements the CloudCore Change Management workflow, using the
+Production Change Management (PRODCM)  project to manage
+changes and approvals.</p>
+<p>[1]: </p>
+<ul>
+<li>
+<p>At least two approvals are required for each PRODCM ticket.  By default, the
+  approvers are</p>
+<ul>
+<li>Security Lead and</li>
+<li>Engineering Lead.</li>
+</ul>
+</li>
+<li>
+<p>Additional approver(s) may be added depending on the impacted component(s).
+  For example,</p>
+<ul>
+<li>the IT Manager is added as an approver for IT/network changes; and</li>
+<li>the DevOps Lead is added as an approver for changes to <code>aws-CloudCore-infra</code>
+  account in AWS.</li>
+</ul>
+</li>
+<li>
+<p>Each PRODCM ticket requires the following information at a minimum:</p>
+<ul>
+<li>Summary of the change</li>
+<li>Component(s) impacted</li>
+<li>Justification</li>
+<li>Rollback plan</li>
+</ul>
+</li>
+<li>
+<p>Additional details are required for a code deploy, including:</p>
+<ul>
+<li>Build job name</li>
+<li>Build ID and/or number</li>
+<li>Deploy action (e.g. plan, apply)</li>
+<li>Deploy branch (e.g. master)</li>
+<li>Target environment (e.g. <code>aws-CloudCore-infra</code>, <code>aws-CloudCore-prod-us</code>, <code>datacenter-hq</code>)</li>
+<li>Links to pull requests and/or  issues</li>
+<li>Security scan status and results</li>
+</ul>
+</li>
+</ul>
+<h3 id="emergency-change">Emergency Change</h3>
+<p>In the event of an emergency, the person or team on call is notified.  This may
+include a combination or Development, IT, and Security.</p>
+<p>If an emergency change must be made, such as patching of a zero-day security
+vulnerability or recovering from a system downtime, and that the standard change
+management process cannot be followed due to time constraint or personnel
+availability or other unforeseen issues, the change can be made by:</p>
+<ul>
+<li>
+<p><strong>Notification:</strong> The Engineering Lead, Security Lead, and/or IT Lead must be
+  notified by email, Slack, or phone call prior to the change . Depending on the
+  nature of the emergency, the leads may choose to inform members of the
+  executive team.</p>
+</li>
+<li>
+<p><strong>Access and Execution:</strong> Manually access of the production system or manual
+  deploy of software, using one of the following access mechanisms as defined in
+  <a href="../access/">Access Control policy and procedures</a>:</p>
+<ol>
+<li>Support/Troubleshooting access</li>
+<li>Root account or root user access</li>
+<li>Local system access (for on-premise environment)</li>
+</ol>
+</li>
+<li>
+<p><strong>Post-emergency Documentation:</strong> A PRODCM ticket should be created within 24
+  hours following the emergency change.  The ticket should contains all details
+  related to the change, including:</p>
+<ul>
+<li>Reason for emergency change</li>
+<li>Method of emergency access used</li>
+<li>Steps and details of the change that was made</li>
+<li>Sign-off/approvals must be obtained per the type of change as defined by
+  the standard CM process</li>
+</ul>
+</li>
+<li>
+<p><strong>Prevention and Improvement:</strong> The change must be fully reviewed by Security
+  and Engineering together with the person/team responsible for the change.  Any
+  process improvement and/or preventative measures should be documented and an
+  implementation plan should be developed.</p>
+</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 <a href="https://github.com/james-willett"  target="_blank" rel="noopener">James Willett</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>

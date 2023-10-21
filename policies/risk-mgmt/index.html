@@ -1,0 +1,1882 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://james-willett.github.io/mkdocs-material-youtube-tutorial/policies/risk-mgmt/">
+      
+      
+        <link rel="prev" href="../ref/">
+      
+      
+        <link rel="next" href="../sdlc/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>Risk Management - CloudCore Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#risk-management" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CloudCore Documentation" class="md-header__button md-logo" aria-label="CloudCore Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CloudCore Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Risk Management
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      CloudCore
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../interviews/interview-CISO/" class="md-tabs__link">
+        Interviews
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Policies
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../support/ISMS/" class="md-tabs__link">
+        Support
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CloudCore Documentation" class="md-nav__button md-logo" aria-label="CloudCore Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    CloudCore Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        CloudCore
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Interviews
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Interviews
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-CISO/" class="md-nav__link">
+        interview CISO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-data-protection-officer/" class="md-nav__link">
+        Interview data protection officer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-database-administrator/" class="md-nav__link">
+        Interview database administrator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-facilities-manager/" class="md-nav__link">
+        Interview facilities manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-helpdesk/" class="md-nav__link">
+        Interview helpdesk
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-infromation-security-manager/" class="md-nav__link">
+        Interview infromation security manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-legal/" class="md-nav__link">
+        Interview legal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-network-engineer/" class="md-nav__link">
+        Interview network engineer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-system-administrator/" class="md-nav__link">
+        Interview system administrator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-typicall-employee/" class="md-nav__link">
+        Interview typicall employee
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-vendor/" class="md-nav__link">
+        Interview vendor
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Policies
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Policies
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        CloudCore Security Policies, Standards, and Procedures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../access/" class="md-nav__link">
+        Access
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../approved-software/" class="md-nav__link">
+        Approved software
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../approved-vendors/" class="md-nav__link">
+        Approved vendors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../asset-mgmt/" class="md-nav__link">
+        Asset Inventory Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bcdr/" class="md-nav__link">
+        Business Continuity and Disaster Recovery
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../breach/" class="md-nav__link">
+        Breach Investigation and Notification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ccm/" class="md-nav__link">
+        Configuration and Change Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compliance-audit/" class="md-nav__link">
+        Compliance Audits and External Communications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cookie-policy/" class="md-nav__link">
+        Cookie policy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-mgmt/" class="md-nav__link">
+        Data Management Policy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-protection/" class="md-nav__link">
+        Data Protection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../definitions/" class="md-nav__link">
+        Definitions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../employee-handbook/" class="md-nav__link">
+        Employee handbook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../facility/" class="md-nav__link">
+        Facility Access and Physical Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gdpr-dpa/" class="md-nav__link">
+        Gdpr dpa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hipaa-baa/" class="md-nav__link">
+        Hipaa baa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hipaa-mapping/" class="md-nav__link">
+        Hipaa mapping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hr/" class="md-nav__link">
+        HR and Personnel Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ir/" class="md-nav__link">
+        Incident Response
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mdm/" class="md-nav__link">
+        Mobile Device Security and Storage Media Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model/" class="md-nav__link">
+        Security Architecture and Operating Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nist-mapping/" class="md-nav__link">
+        Nist mapping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policy-mgmt/" class="md-nav__link">
+        Policy Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../privacy-policy/" class="md-nav__link">
+        Privacy policy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../privacy/" class="md-nav__link">
+        Privacy and Consent
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../program/" class="md-nav__link">
+        Security Program Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rar/" class="md-nav__link">
+        Roles, Responsibilities and Training
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref/" class="md-nav__link">
+        Addendum and References
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Risk Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Risk Management
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#policy-statements" class="md-nav__link">
+    Policy Statements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controls-and-procedures" class="md-nav__link">
+    Controls and Procedures
+  </a>
+  
+    <nav class="md-nav" aria-label="Controls and Procedures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risk-management-objectives" class="md-nav__link">
+    Risk Management Objectives
+  </a>
+  
+    <nav class="md-nav" aria-label="Risk Management Objectives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acceptable-risk-levels" class="md-nav__link">
+    Acceptable Risk Levels
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-management-process" class="md-nav__link">
+    Risk Management Process
+  </a>
+  
+    <nav class="md-nav" aria-label="Risk Management Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risk-management-schedule" class="md-nav__link">
+    Risk Management Schedule
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-assessment-and-analysis" class="md-nav__link">
+    Risk Assessment and Analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-mitigation-and-monitoring" class="md-nav__link">
+    Risk Mitigation and Monitoring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-registry" class="md-nav__link">
+    Risk Registry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cyber-liability-insurance" class="md-nav__link">
+    Cyber Liability Insurance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fraud-risks" class="md-nav__link">
+    Fraud Risks
+  </a>
+  
+    <nav class="md-nav" aria-label="Fraud Risks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#potential-frauds-and-likelihood" class="md-nav__link">
+    Potential Frauds and Likelihood
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdlc/" class="md-nav__link">
+        Secure Software Development and Product Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-audit/" class="md-nav__link">
+        System Audits, Monitoring and Assessments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../threat/" class="md-nav__link">
+        Threat Detection and Prevention
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vendor/" class="md-nav__link">
+        Third Party Security, Vendor Risk Management and Systems/Services Acquisition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vuln-mgmt/" class="md-nav__link">
+        Vulnerability Management
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Support
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/ISMS/" class="md-nav__link">
+        CloudCore Networks Information Security Management System
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/Preparing%20ISO%2027001/" class="md-nav__link">
+        Preparing ISO 27001
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/Risk%20Register/" class="md-nav__link">
+        Risk Register
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/Training/" class="md-nav__link">
+        Training
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/network-logical/" class="md-nav__link">
+        Network logical
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/org-chart-names-full/" class="md-nav__link">
+        Org chart names full
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="risk-management">Risk Management</h1>
+<p><code>2023.1</code></p>
+<p>This policy establishes the scope, objectives, and procedures of CloudCore's
+information security risk management process. The risk management process is
+intended to support and protect the organization and its ability to fulfill its
+mission.</p>
+<h2 id="policy-statements">Policy Statements</h2>
+<p>CloudCore policy requires that:</p>
+<p>(a) A thorough risk assessment must be conducted to evaluate the potential
+threats and vulnerabilities to the confidentiality, integrity, and availability
+of sensitive, confidential and proprietary electronic information it stores,
+transmits, and/or processes.</p>
+<p>(b) Risk assessments must be performed with any major change to CloudCore's
+business or technical operations and/or supporting infrastructure, no less than
+once per year.</p>
+<p>(c) Strategies shall be developed to mitigate or accept the risks identified in
+the risk assessment process.</p>
+<p>(d) Maintain documentation of all risk assessment, risk management, and risk
+mitigation efforts for a minimum of seven years.</p>
+<h2 id="controls-and-procedures">Controls and Procedures</h2>
+<h3 id="risk-management-objectives">Risk Management Objectives</h3>
+<p>CloudCore has established formal risk analysis and risk management
+processes to</p>
+<ul>
+<li>
+<p>identify risks that may impact its business operations or the confidentiality,
+  integrity and availability of its critical data; and</p>
+</li>
+<li>
+<p>reduce risk to an acceptable level by implementation of mitigation controls.</p>
+</li>
+</ul>
+<p>Unmitigated risk above the pre-defined acceptable level must be reviewed,
+approved and accepted by senior management.</p>
+<h4 id="acceptable-risk-levels">Acceptable Risk Levels</h4>
+<p>Risks that are either low impact or low probability, based on the scoring
+mechanism defined in <a href="cp-risk-assess.md">risk assessment process</a>, are generally
+considered acceptable.</p>
+<p>All other risks must be individually reviewed and managed according to the
+<a href="cp-risk-mgmt.md">risk management process</a>.</p>
+<h3 id="risk-management-process">Risk Management Process</h3>
+<p>Risk analysis and risk management are recognized as important components of
+CloudCore's corporate compliance and information security program.</p>
+<p>CloudCore's risk management process is developed in accordance with
+the Risk Analysis and Risk Management implementation specifications within the
+Security Management standard and the evaluation standards set forth in the HIPAA
+Security Rule, 45 CFR 164.308(a)(1)(ii)(A), 164.308(a)(1)(ii)(B),
+164.308(a)(1)(i), and 164.308(a)(8).</p>
+<p>Risk assessments are done throughout product life cycles:</p>
+<ul>
+<li>Before the integration of new system technologies and before changes are
+    made to CloudCore physical and technical safeguards; and (Note that these
+    changes do not include routine updates to existing systems, deployments of
+    new systems created based on previously configured systems, deployments of
+    new Customers, or new code developed for operations and management of the
+    CloudCore Platform)</li>
+<li>While making changes to CloudCore physical equipment and facilities that
+    introduce new, untested configurations.</li>
+</ul>
+<p>CloudCore performs periodic technical and non-technical assessments of the
+security rule requirements as well as in response to environmental or
+operational changes affecting the security of sensitive data.</p>
+<p>CloudCore implements security measures sufficient to reduce risks and
+vulnerabilities to a reasonable and appropriate level to:</p>
+<ol>
+<li>Ensure the confidentiality, integrity, and availability of all sensitive data
+     CloudCore receives, maintains, processes, and/or transmits for its
+     Customers;</li>
+<li>Protect against any reasonably anticipated threats or hazards to the
+     security or integrity of Customer data and/or sensitive data;</li>
+<li>Protect against any reasonably anticipated uses or disclosures of Customer
+     data and/or sensitive data that are not permitted or required; and</li>
+<li>Ensure compliance by all workforce members.</li>
+</ol>
+<p>In addition, CloudCore risk management process requires that:</p>
+<ol>
+<li>Any risk remaining (residual) after other risk controls have been applied,
+   requires sign off by the senior management and CloudCore's Security Officer.</li>
+<li>All CloudCore workforce members are expected to fully cooperate with all
+   persons charged with doing risk management work, including contractors and
+   audit personnel. Any workforce member that violates this policy will be
+   subject to disciplinary action based on the severity of the violation, as
+   outlined in the CloudCore Roles Policy.</li>
+<li>The implementation, execution, and maintenance of the information security
+   risk analysis and risk management process is the responsibility of CloudCore's
+   Security Officer (or other designated employee), and the identified Risk
+   Management Team.</li>
+<li>All risk management efforts, including decisions made on what controls to put
+   in place as well as those to not put into place, are documented and the
+   documentation is maintained for six years.</li>
+<li>
+<p>The details of the Risk Management Process, including risk assessment,
+   discovery, and mitigation, are outlined in detail below. The process is
+   tracked, measured, and monitored using the following procedures:</p>
+<ol>
+<li>The Security Officer or the Privacy Officer initiates the Risk Management
+   Procedures by creating an Issue in the  Security Project.</li>
+<li>The Security Officer or the Privacy Officer is assigned to carry out the
+   Risk Management Procedures.</li>
+<li>All findings are documented and linked to the Issue.</li>
+<li>Once the Risk Assessment steps are complete, along with corresponding
+   documentation, the Security Officer approves or rejects the Issue. If the
+   Issue is rejected, it goes back for further review and documentation.</li>
+<li>If the review is approved, the Security Officer then marks the Issue as
+   Done, adding any pertinent notes required.</li>
+</ol>
+</li>
+<li>
+<p>The Risk Management Procedure is monitored on a quarterly basis using 
+   reporting to assess compliance with above policy.</p>
+</li>
+</ol>
+<p>Third party risk management details including procurement and systems
+acquisition can be found in <a href="../vendor/">§vendor</a>.</p>
+<h4 id="risk-management-schedule">Risk Management Schedule</h4>
+<p>The two principle components of the risk management process - risk assessment
+and risk mitigation - will be carried out according to the following schedule to
+ensure the continued adequacy and continuous improvement of CloudCore's
+information security program:</p>
+<ul>
+<li>
+<p>Scheduled Basis - an overall risk assessment of CloudCore's information system
+  infrastructure will be conducted annually. The assessment process should be
+  completed in a timely fashion so that risk mitigation strategies can be
+  determined and included in the corporate budgeting process.</p>
+</li>
+<li>
+<p>Throughout a System's Development Life Cycle - from the time that a need for a
+  new, untested information system configuration and/or application is
+  identified through the time it is disposed of, ongoing assessments of the
+  potential threats to a system and its vulnerabilities should be undertaken as
+  a part of the maintenance of the system.</p>
+</li>
+<li>
+<p>As Needed - the Security Officer (or other designated employee) or Risk
+  Management Team may call for a full or partial risk assessment in response to
+  changes in business strategies, information technology, information
+  sensitivity, threats, legal liabilities, or other significant factors that
+  affect CloudCore's Platform.</p>
+</li>
+</ul>
+<h3 id="risk-assessment-and-analysis">Risk Assessment and Analysis</h3>
+<p>The intent of completing a risk assessment is to determine potential threats and
+vulnerabilities and the likelihood and impact should they occur. The output of
+this process helps to identify appropriate controls for reducing or eliminating
+risk.</p>
+<ul>
+<li>
+<p>Step 1. System Characterization</p>
+<ul>
+<li>
+<p>The first step in assessing risk is to define the scope of the effort. To
+  do this, identify where sensitive data is received, maintained, processed, or
+  transmitted. Using information-gathering techniques, the CloudCore Platform
+  boundaries are identified.</p>
+</li>
+<li>
+<p>Output - Characterization of the CloudCore Platform system assessed, a good
+  picture of the Platform environment, and delineation of Platform
+  boundaries.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 2. Threat Identification</p>
+<ul>
+<li>
+<p>Potential threats (the potential for threat-sources to successfully
+  exercise a particular vulnerability) are identified and documented. All
+  potential threat-sources through the review of historical incidents and
+  data from intelligence agencies, the government, etc., to help generate a
+  list of potential threats.</p>
+</li>
+<li>
+<p>Output - A threat list containing a list of threat-sources that could
+  exploit Platform vulnerabilities.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 3. Vulnerability Identification</p>
+<ul>
+<li>
+<p>Develop a list of technical and non-technical Platform vulnerabilities
+  that could be exploited or triggered by potential threat-sources.
+  Vulnerabilities can range from incomplete or conflicting policies that
+  govern an organization's computer usage to insufficient safeguards to
+  protect facilities that house computer equipment to any number of
+  software, hardware, or other deficiencies that comprise an organization's
+  computer network.</p>
+</li>
+<li>
+<p>Output - A list of the Platform vulnerabilities (observations) that could
+  be exercised by potential threat-sources.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 4. Control Analysis</p>
+<ul>
+<li>
+<p>Document and assess the effectiveness of technical and non-technical
+  controls that have been or will be implemented by CloudCore to minimize or
+  eliminate the likelihood / probability of a threat-source exploiting a
+  Platform vulnerability.</p>
+</li>
+<li>
+<p>Output - List of current or planned controls (policies, procedures,
+  training, technical mechanisms, insurance, etc.) used for the Platform to
+  mitigate the likelihood of a vulnerability being exercised and reduce the
+  impact of such an adverse event.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 5. Likelihood Determination</p>
+<ul>
+<li>
+<p>Determine the overall likelihood rating that indicates the probability
+  that a vulnerability could be exploited by a threat-source given the
+  existing or planned security controls.</p>
+</li>
+<li>
+<p>Output - Likelihood rating of low (.1), medium (.5), or high (1). Refer to
+  the NIST SP 800-30 definitions of low, medium, and high.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 6. Impact Analysis</p>
+<ul>
+<li>
+<p>Determine the level of adverse impact that would result from a threat
+  successfully exploiting a vulnerability. Factors of the data and systems
+  to consider should include the importance to CloudCore's mission;
+  sensitivity and criticality (value or importance); costs associated; loss
+  of confidentiality, integrity, and availability of systems and data.</p>
+</li>
+<li>
+<p>Output - Magnitude of impact rating of low (10), medium (50), or high
+  (100). Refer to the NIST SP 800-30 definitions of low, medium, and high.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 7. Risk Determination</p>
+<ul>
+<li>
+<p>Establish a risk level. By multiplying the ratings from the likelihood
+  determination and impact analysis, a risk level is determined. This
+  represents the degree or level of risk to which an IT system, facility, or
+  procedure might be exposed if a given vulnerability were exercised. The
+  risk rating also presents actions that senior management must take for
+  each risk level.</p>
+</li>
+<li>
+<p>Output - Risk level of low (1-10), medium (&gt;10-50) or high (&gt;50-100).
+  Refer to the NIST SP 800-30 definitions of low, medium, and high.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 8. Control Recommendations</p>
+<ul>
+<li>
+<p>Identify controls that could reduce or eliminate the identified risks, as
+  appropriate to the organization's operations to an acceptable level.
+  Factors to consider when developing controls may include effectiveness of
+  recommended options (i.e., system compatibility), legislation and
+  regulation, organizational policy, operational impact, and safety and
+  reliability. Control recommendations provide input to the risk mitigation
+  process, during which the recommended procedural and technical security
+  controls are evaluated, prioritized, and implemented.</p>
+</li>
+<li>
+<p>Output - Recommendation of control(s) and alternative solutions to
+  mitigate risk.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 9. Results Documentation</p>
+<ul>
+<li>
+<p>Results of the risk assessment are documented in an official report,
+  spreadsheet, or briefing and provided to senior management to make
+  decisions on policy, procedure, budget, and Platform operational and
+  management changes.</p>
+</li>
+<li>
+<p>Output - A risk assessment report that describes the threats and
+  vulnerabilities, measures the risk, and provides recommendations for
+  control implementation.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="risk-mitigation-and-monitoring">Risk Mitigation and Monitoring</h3>
+<p>Risk mitigation involves prioritizing, evaluating, and implementing the
+appropriate risk-reducing controls recommended from the Risk Assessment process
+to ensure the confidentiality, integrity and availability of CloudCore Platform
+data. Determination of appropriate controls to reduce risk is dependent upon the
+risk tolerance of the organization consistent with its goals and mission.</p>
+<ul>
+<li>
+<p>Step 1. Prioritize Actions</p>
+<ul>
+<li>
+<p>Using results from Step 7 of the Risk Assessment, sort the threat and
+  vulnerability pairs according to their risk-levels in descending order.
+  This establishes a prioritized list of actions needing to be taken, with
+  the pairs at the top of the list getting/requiring the most immediate
+  attention and top priority in allocating resources</p>
+</li>
+<li>
+<p>Output - Actions ranked from high to low</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 2. Evaluate Recommended Control Options</p>
+<ul>
+<li>
+<p>Although possible controls for each threat and vulnerability pair are
+  arrived at in Step 8 of the Risk Assessment, review the recommended
+  control(s) and alternative solutions for reasonableness and
+  appropriateness. The feasibility (e.g., compatibility, user acceptance,
+  etc.) and effectiveness (e.g., degree of protection and level of risk
+  mitigation) of the recommended controls should be analyzed. In the end,
+  select a "most appropriate" control option for each threat and
+  vulnerability pair.</p>
+</li>
+<li>
+<p>Output - list of feasible controls</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 3. Conduct Cost-Benefit Analysis</p>
+<ul>
+<li>
+<p>Determine the extent to which a control is cost-effective. Compare the
+  benefit (e.g., risk reduction) of applying a control with its subsequent
+  cost of application. Controls that are not cost-effective are also
+  identified during this step. Analyzing each control or set of controls in
+  this manner, and prioritizing across all controls being considered, can
+  greatly aid in the decision-making process.</p>
+</li>
+<li>
+<p>Output - Documented cost-benefit analysis of either implementing or not
+  implementing each specific control</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 4. Select Control(s)</p>
+<ul>
+<li>
+<p>Taking into account the information and results from previous steps,
+  CloudCore's mission, and other important criteria, the Risk Management Team
+  determines the best control(s) for reducing risks to the information
+  systems and to data confidentiality, integrity, and availability.
+  These controls may consist of a mix of administrative, physical, and/or
+  technical safeguards.</p>
+</li>
+<li>
+<p>Output - Selected control(s)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 5. Assign Responsibility</p>
+<ul>
+<li>
+<p>Identify the workforce members with the skills necessary to implement each
+  of the specific controls outlined in the previous step, and assign their
+  responsibilities. Also identify the equipment, training and other
+  resources needed for the successful implementation of controls. Resources
+  may include time, money, equipment, etc.</p>
+</li>
+<li>
+<p>Output - List of resources, responsible persons and their assignments</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 6. Develop Safeguard Implementation Plan</p>
+<ul>
+<li>
+<p>Develop an overall implementation or action plan and individual project
+  plans needed to implement the safeguards and controls identified. The
+  Implementation Plan should contain the following information:</p>
+<ul>
+<li>Each risk or vulnerability/threat pair and risk level;</li>
+<li>Prioritized actions;</li>
+<li>The recommended feasible control(s) for each identified risk;</li>
+<li>Required resources for implementation of selected controls;</li>
+<li>Team member responsible for implementation of each control;</li>
+<li>Start date for implementation</li>
+<li>Target date for completion of implementation;</li>
+<li>Maintenance requirements.</li>
+</ul>
+</li>
+<li>
+<p>The overall implementation plan provides a broad overview of the safeguard
+  implementation, identifying important milestones and timeframes, resource
+  requirements (staff and other individuals' time, budget, etc.),
+  interrelationships between projects, and any other relevant information.
+  Regular status reporting of the plan, along with key metrics and success
+  indicators should be reported to CloudCore Senior Management.</p>
+</li>
+<li>
+<p>Individual project plans for safeguard implementation may be developed and
+  contain detailed steps that resources assigned carry out to meet
+  implementation timeframe and expectations. Additionally, consider
+  including items in individual project plans such as a project scope, a
+  list deliverables, key assumptions, objectives, task completion dates and
+  project requirements.</p>
+</li>
+<li>
+<p>Output - Safeguard Implementation Plan</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 7. Implement Selected Controls</p>
+<ul>
+<li>
+<p>As controls are implemented, monitor the affected system(s) to verify that
+  the implemented controls continue to meet expectations. Elimination of all
+  risk is not practical. Depending on individual situations, implemented
+  controls may lower a risk level but not completely eliminate the risk.</p>
+</li>
+<li>
+<p>Continually and consistently communicate expectations to all Risk
+  Management Team members, as well as senior management and other key people
+  throughout the risk mitigation process. Identify when new risks are
+  identified and when controls lower or offset risk rather than eliminate
+  it.</p>
+</li>
+<li>
+<p>Additional monitoring is especially crucial during times of major
+  environmental changes, organizational or process changes, or major
+  facilities changes.</p>
+</li>
+<li>
+<p>If risk reduction expectations are not met, then repeat all or a part of
+  the risk management process so that additional controls needed to lower
+  risk to an acceptable level can be identified.</p>
+</li>
+<li>
+<p>Output - Residual Risk documentation</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="risk-registry">Risk Registry</h3>
+<p>CloudCore Security team maintains a registry of risks, captured and kept updated</p>
+<ul>
+<li>in a document on company SharePoint; and/or</li>
+<li>in the security operations tool/database.</li>
+</ul>
+<p>The risk registry includes all risks and threats identified during annual risk
+assessment and all interim reviews.</p>
+<h3 id="cyber-liability-insurance">Cyber Liability Insurance</h3>
+<p>CloudCore holds cyber liability insurance with sufficient coverage
+based on the organization's risk profile.</p>
+<p>Our current cyber policy is covered by .</p>
+<h3 id="fraud-risks">Fraud Risks</h3>
+<p>Due to its transparent culture, team size and operating model, including
+separation of duties, comprehensive controls, continuous monitoring and auditing,
+CloudCore considers its fraud-related risk to be very low.</p>
+<p>CloudCore hires  to perform accounting services and
+annual financial audits.</p>
+<p>Fraud risk is re-evaluated as part of the organization's annual risk assessment.
+The assessment considers the following aspects of fraud:</p>
+<ul>
+<li>Pressures and/or incentives</li>
+<li>Opportunities</li>
+<li>Rationalities</li>
+</ul>
+<p>Financial-related fraud assessment is led by the COO/CFO.</p>
+<p>IT-related fraud assessment is led by the Compliance Officer or CISO.</p>
+<h4 id="potential-frauds-and-likelihood">Potential Frauds and Likelihood</h4>
+<table>
+<thead>
+<tr>
+<th>Fraud Risk</th>
+<th>Likelihood</th>
+<th>In Place Controls/Monitors</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fraudulent Financial Reporting</td>
+<td>Low</td>
+<td>Monthly executive team reviews of business plan and revenue; Financial review by external accounting firm</td>
+</tr>
+<tr>
+<td>Misappropriation of Assets</td>
+<td>Low</td>
+<td>Expense reporting and asset tracking in place</td>
+</tr>
+<tr>
+<td>Regulatory and Legal Misconduct</td>
+<td>Low</td>
+<td>Audit and compliance policies and processes, including whistleblower procedures; engage external law firm to review legal conduct</td>
+</tr>
+<tr>
+<td>Payroll Fraud</td>
+<td>Low</td>
+<td>Payroll is reviewed by at least two people internally as well as by external accounting firm</td>
+</tr>
+<tr>
+<td>Kickbacks / Conflict of Interest</td>
+<td>Low</td>
+<td>Team-based vendor review and selection process</td>
+</tr>
+<tr>
+<td>Misuse of Cloud Resources</td>
+<td>Low</td>
+<td>Continuous resource monitoring for all cloud accounts and regions and expense monitoring</td>
+</tr>
+<tr>
+<td>Other IT Fraud</td>
+<td>Low</td>
+<td>IT assets and resources tracking</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 <a href="https://github.com/james-willett"  target="_blank" rel="noopener">James Willett</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>

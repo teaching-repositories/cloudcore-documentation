@@ -1,0 +1,1728 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://james-willett.github.io/mkdocs-material-youtube-tutorial/policies/model/">
+      
+      
+        <link rel="prev" href="../mdm/">
+      
+      
+        <link rel="next" href="../nist-mapping/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>Security Architecture and Operating Model - CloudCore Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#security-architecture-and-operating-model" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CloudCore Documentation" class="md-header__button md-logo" aria-label="CloudCore Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CloudCore Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Security Architecture and Operating Model
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      CloudCore
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../interviews/interview-CISO/" class="md-tabs__link">
+        Interviews
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Policies
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../support/ISMS/" class="md-tabs__link">
+        Support
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CloudCore Documentation" class="md-nav__button md-logo" aria-label="CloudCore Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    CloudCore Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        CloudCore
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Interviews
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Interviews
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-CISO/" class="md-nav__link">
+        interview CISO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-data-protection-officer/" class="md-nav__link">
+        Interview data protection officer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-database-administrator/" class="md-nav__link">
+        Interview database administrator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-facilities-manager/" class="md-nav__link">
+        Interview facilities manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-helpdesk/" class="md-nav__link">
+        Interview helpdesk
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-infromation-security-manager/" class="md-nav__link">
+        Interview infromation security manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-legal/" class="md-nav__link">
+        Interview legal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-network-engineer/" class="md-nav__link">
+        Interview network engineer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-system-administrator/" class="md-nav__link">
+        Interview system administrator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-typicall-employee/" class="md-nav__link">
+        Interview typicall employee
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-vendor/" class="md-nav__link">
+        Interview vendor
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Policies
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Policies
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        CloudCore Security Policies, Standards, and Procedures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../access/" class="md-nav__link">
+        Access
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../approved-software/" class="md-nav__link">
+        Approved software
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../approved-vendors/" class="md-nav__link">
+        Approved vendors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../asset-mgmt/" class="md-nav__link">
+        Asset Inventory Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bcdr/" class="md-nav__link">
+        Business Continuity and Disaster Recovery
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../breach/" class="md-nav__link">
+        Breach Investigation and Notification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ccm/" class="md-nav__link">
+        Configuration and Change Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compliance-audit/" class="md-nav__link">
+        Compliance Audits and External Communications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cookie-policy/" class="md-nav__link">
+        Cookie policy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-mgmt/" class="md-nav__link">
+        Data Management Policy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-protection/" class="md-nav__link">
+        Data Protection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../definitions/" class="md-nav__link">
+        Definitions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../employee-handbook/" class="md-nav__link">
+        Employee handbook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../facility/" class="md-nav__link">
+        Facility Access and Physical Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gdpr-dpa/" class="md-nav__link">
+        Gdpr dpa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hipaa-baa/" class="md-nav__link">
+        Hipaa baa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hipaa-mapping/" class="md-nav__link">
+        Hipaa mapping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hr/" class="md-nav__link">
+        HR and Personnel Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ir/" class="md-nav__link">
+        Incident Response
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mdm/" class="md-nav__link">
+        Mobile Device Security and Storage Media Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Security Architecture and Operating Model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Security Architecture and Operating Model
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#policy-statements" class="md-nav__link">
+    Policy Statements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controls-and-procedures" class="md-nav__link">
+    Controls and Procedures
+  </a>
+  
+    <nav class="md-nav" aria-label="Controls and Procedures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cloudcore-security-principles" class="md-nav__link">
+    CloudCore Security Principles
+  </a>
+  
+    <nav class="md-nav" aria-label="CloudCore Security Principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-data-centric-model-zero-trust-architecture" class="md-nav__link">
+    (1) Data-centric model; zero-trust architecture
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-air-gapped-environments-meet-short-lived-processes" class="md-nav__link">
+    (2) “Air-Gapped” environments meet short-lived processes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-least-privilege-temporary-access" class="md-nav__link">
+    (3) Least-privilege temporary access
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-immutable-builds-and-deploys" class="md-nav__link">
+    (4) Immutable builds and deploys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-end-to-end-data-protection-and-privacy" class="md-nav__link">
+    (5) End-to-end data protection and privacy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-strong-yet-flexible-user-access" class="md-nav__link">
+    (6) Strong yet flexible user access
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-watch-everything-even-the-watchers" class="md-nav__link">
+    (7) Watch everything, even the watchers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-centralized-and-automated-operations" class="md-nav__link">
+    (8) Centralized and automated operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-usable-security" class="md-nav__link">
+    (9) Usable security
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-regulatory-compliant-and-hacker-verified" class="md-nav__link">
+    (10) Regulatory compliant and hacker verified
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-architecture" class="md-nav__link">
+    Security Architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#architecture-diagrams" class="md-nav__link">
+    Architecture Diagrams
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-architecture" class="md-nav__link">
+    Cloud Architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="Cloud Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cloud-native" class="md-nav__link">
+    Cloud Native
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customer-benefits" class="md-nav__link">
+    Customer Benefits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution-of-cloud-computing" class="md-nav__link">
+    Evolution of Cloud Computing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrics-measurements-and-continuous-monitoring" class="md-nav__link">
+    Metrics, Measurements and Continuous Monitoring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality-of-service" class="md-nav__link">
+    Quality of Service
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nist-mapping/" class="md-nav__link">
+        Nist mapping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policy-mgmt/" class="md-nav__link">
+        Policy Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../privacy-policy/" class="md-nav__link">
+        Privacy policy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../privacy/" class="md-nav__link">
+        Privacy and Consent
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../program/" class="md-nav__link">
+        Security Program Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rar/" class="md-nav__link">
+        Roles, Responsibilities and Training
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref/" class="md-nav__link">
+        Addendum and References
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../risk-mgmt/" class="md-nav__link">
+        Risk Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdlc/" class="md-nav__link">
+        Secure Software Development and Product Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-audit/" class="md-nav__link">
+        System Audits, Monitoring and Assessments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../threat/" class="md-nav__link">
+        Threat Detection and Prevention
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vendor/" class="md-nav__link">
+        Third Party Security, Vendor Risk Management and Systems/Services Acquisition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vuln-mgmt/" class="md-nav__link">
+        Vulnerability Management
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Support
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/ISMS/" class="md-nav__link">
+        CloudCore Networks Information Security Management System
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/Preparing%20ISO%2027001/" class="md-nav__link">
+        Preparing ISO 27001
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/Risk%20Register/" class="md-nav__link">
+        Risk Register
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/Training/" class="md-nav__link">
+        Training
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/network-logical/" class="md-nav__link">
+        Network logical
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/org-chart-names-full/" class="md-nav__link">
+        Org chart names full
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="security-architecture-and-operating-model">Security Architecture and Operating Model</h1>
+<p><code>2023.1</code></p>
+<p>In the digital age, cyber attacks are inevitable. At CloudCore, we are taking a
+“zero trust”, “minimal infrastructure” approach to managing risk and information
+security.</p>
+<p>This document describes our guiding principles and aspirations in managing risk
+and the building blocks of our security model.</p>
+<h2 id="policy-statements">Policy Statements</h2>
+<p>CloudCore policy requires that:</p>
+<p>(a) CloudCore's security program and operations should be designed and
+implemented with the following objectives and best practices:</p>
+<ul>
+<li>data-centric, cloud-first</li>
+<li>assume compromise therefore never trust, always verify</li>
+<li>apply controls using least-privilege and defense-in-depth principles</li>
+<li>avoid single point of compromise</li>
+<li>automate whenever possible, the simpler the better, less is more</li>
+<li>prompt self management and reward good behaviors</li>
+</ul>
+<p>(b) Security shall remain a top priority in all aspects of CloudCore's business
+operations and product development.</p>
+<h2 id="controls-and-procedures">Controls and Procedures</h2>
+<h3 id="cloudcore-security-principles">CloudCore Security Principles</h3>
+<h4 id="1-data-centric-model-zero-trust-architecture">(1) Data-centric model; zero-trust architecture</h4>
+<p>“Zero Trust” is a data-centric security design that puts micro-perimeters around
+specific data or assets so that more granular rules can be enforced. It remedies
+the deficiencies with perimeter-centric strategies and the legacy devices and
+technologies used to implement them. It does this by promoting “never trust,
+always verify” as its guiding principle. This differs substantially from
+conventional security models which operate on the basis of “trust but verify.”</p>
+<p>In particular, with Zero Trust there is no default trust for any entity —
+including users, devices, applications, and packets—regardless of what it is and
+its location on or relative to the corporate network. In addition, verifying
+that authorized entities are always doing only what they’re allowed to do is no
+longer optional; it’s now mandatory.</p>
+<div class="admonition summary">
+<p class="admonition-title">Summary</p>
+<ul>
+<li>No internal network. (Almost) 100% cloud.</li>
+<li>Fully segregated with Granular policy enforcements.</li>
+<li>Individually secured devices. No production access by default.</li>
+</ul>
+</div>
+<h4 id="2-air-gapped-environments-meet-short-lived-processes">(2) “Air-Gapped” environments meet short-lived processes</h4>
+<p>We extend the zero-trust security model with a “Minimal Infrastructure”
+approach, where we use “Anything-as-a-Service” whenever possible, to harness the
+full power of the cloud. Cloud services allow us to contain and control access
+at a much more granular level, compared to operating on-premise infrastructure.
+Via access to the extensive APIs provided by the cloud services, we would be
+able to more easily integrate and automate security operations. Additionally,
+minimizing infrastructure significantly reduces always-on attack surfaces.
+Services that are not used are turned off, instead of being idly available which
+opens itself up to attacks. Together with Zero Trust, this security model and
+architecture enables a high degree of flexibility for end-user computing while
+maintaining the highest level of security assurance.</p>
+<div class="admonition summary">
+<p class="admonition-title">Summary</p>
+<ul>
+<li>No direct administrative or broad network connectivity into production.</li>
+<li>Processes are short-lived and killed after use.</li>
+<li>Minimal persistent attack surface making it virtually impenetrable.</li>
+</ul>
+</div>
+<h4 id="3-least-privilege-temporary-access">(3) Least-privilege temporary access</h4>
+<p>Cyber attacks are inevitable. When it comes to preparing for potential attacks,
+CloudCore security operations take the approach that assumes a compromise can
+happen at any time, to any device, with little to no indicators. This is also an
+extension of the “zero trust” model. When building security operations, we
+carefully perform risk analysis and threat model, to identify potential single
+point of compromise and to avoid having the “keys to the kingdom”.</p>
+<p>In other words, compromise of any single system or user or credential, should
+not easily lead to a broad or full compromise of the entire infrastructure or
+operations. For example, if an attacker gains access to a admin credential (e.g.
+Active Directory domain), it should not directly lead to the compromise of all
+systems and data in the environment.</p>
+<div class="admonition summary">
+<p class="admonition-title">Summary</p>
+<ul>
+<li>Need-based access control for both employees and computing services.</li>
+<li>Access to critical systems and resources are closed by default, granted on demand.</li>
+<li>Protected by strong multi-factor authentication.</li>
+<li>No “keys to the kingdom”; no single points of compromise.</li>
+<li>"Secrets" (such as SSH Keys) must remain secret at all times.</li>
+</ul>
+</div>
+<h4 id="4-immutable-builds-and-deploys">(4) Immutable builds and deploys</h4>
+<p>The CloudCore platform leverages a micro-service architecture. This means that
+the system has been decomposed into numerous small components that can be built
+and deployed individually. Before these components get deployed to our
+<em>production</em> environments, we thoroughly test and validate the changes in our
+<em>lower</em> environments which are completely isolated from production. This allows
+us to test upcoming changes while ensuring there is no impact to our customers.</p>
+<p>As a particular build of a component progresses through our environments, it is
+important that the build does not change thus we ensure that each build is
+immutable. Once an <em>immutable build</em> has been validated in our <em>lower</em>
+(non-production) environments, we then deploy it to our <em>production</em> environment
+where the change will be available to CloudCore customers and end-users.</p>
+<p>Changes to our infrastructure (database schema changes, storage buckets, load
+balances, DNS entries, etc.) are also described in our source code and deployed
+to our environments just like the applications. This architectural approach to
+managing infrastructure is referred to as <em>infrastructure as code</em> and is a key
+requirement for fully automated deployments with minimal human touch.</p>
+<div class="admonition summary">
+<p class="admonition-title">Summary</p>
+<ul>
+<li>Infrastructure as code with active protection.</li>
+<li>Automated security scans and full traceability from code commit to production.</li>
+<li>“Hands-free” deployment ensures each build is free from human error or malicious contamination.</li>
+</ul>
+</div>
+<h4 id="5-end-to-end-data-protection-and-privacy">(5) End-to-end data protection and privacy</h4>
+<p>It is of the utmost importance that CloudCore provides for confidentiality (privacy), integrity
+and availability of its customer's data. Your data is protected with end-to-end
+encryption, combined with strong access control and key management. We also
+prohibit our internal employees to access customer data directly in production.
+So your data remains safe and private at all times. We will never use or share
+your data without your prior consent.</p>
+<p>We are proud to offer our customers data storage peace of mind with a money-back
+guarantee. We guarantee your private data stored on our platform is always safe
+and protected from cyberattacks such as ransomware, and we will reimburse you
+for certain losses of such data due to unauthorized activity in eligible
+accounts that resulted through no fault of your own.</p>
+<div class="admonition summary">
+<p class="admonition-title">Summary</p>
+<ul>
+<li>Data is safe both at rest and in transit, using strong encryption, access control and key management.</li>
+<li>No internal user access is allowed to customer data in production.</li>
+</ul>
+</div>
+<h4 id="6-strong-yet-flexible-user-access">(6) Strong yet flexible user access</h4>
+<p>We all know by now that "Passw0rd" makes a terrible password. Access control is
+so important we must get it right. That's why we leverage tried-and-true
+technology such as SAML, OAuth, multi-factor authentication, and fine-grained
+authorization to provide strong yet intuitive access options, both for our
+internal staff to access business resources and for our customers to access
+CloudCore platform and services.</p>
+<div class="admonition summary">
+<p class="admonition-title">Summary</p>
+<ul>
+<li>OAuth 2.0, OpenID Connect, SAML for customer authentication and single sign-on.</li>
+<li>Multi-factor authentication.</li>
+<li>Fine-grain attribute-based or role-based authorization.</li>
+</ul>
+</div>
+<h4 id="7-watch-everything-even-the-watchers">(7) Watch everything, even the watchers</h4>
+<p>You can’t protect what you can’t see.</p>
+<p>As the famous strategist, Sun Tzu, once said, “Know thy self, know thy enemy. A
+thousand battles, a thousand victories.” It all starts with knowing ourselves.
+This applies to the infrastructure, environments, operations, users, systems,
+resources, and most importantly, data. It is important to inventory all assets,
+document all operations, identify all weaknesses, and visualize/understand all
+events.</p>
+<p>This includes conducting various risk analysis, threat modeling, vulnerability
+assessments, application scanning, and penetration testing. Not only that, this
+requires security operations to keep an eye on everything, and someone should
+also "watch the watchers".</p>
+<p>At first, this would require significant manual effort and may seem impossible
+to keep up-to-date. Our goal is to automate security operations, so that this
+can be achieved programmatically as our operations evolve to become more
+complex.</p>
+<p>Additionally, CloudCore security team will actively monitor threat intelligence
+in the community, with feeds and information sharing platform such as NH-ISAC to
+stay abreast of the attacker activities and methodologies.</p>
+<div class="admonition summary">
+<p class="admonition-title">Summary</p>
+<ul>
+<li>All environments are monitored; All events are logged; All alerts are analyzed; All assets are tracked.</li>
+<li>No privileged access without prior approval or full auditing.</li>
+<li>We deploy monitoring redundancy to “watch the watchers”.</li>
+</ul>
+</div>
+<h4 id="8-centralized-and-automated-operations">(8) Centralized and automated operations</h4>
+<p>As much as possible, CloudCore security will translate policy and compliance
+requirements into reusable code for easy implementation and maintenance. This
+allows us to truly be able to enforce policy and compliance in a fast and
+scalable way, rather than relying solely on written policies and intermittent
+manual audits. For example, end-point device policies may be translated into
+Chef InSpec code and compliance may be enforced through the agent. Access
+Control policies for production environments are translated into AWS IAM JSON
+policies and implemented via Terraform code.</p>
+<p>Automation makes it truly possible to centralize security operations, including
+not only event aggregation and correlation, but also the orchestration and
+management of previously siloed security controls and remediation efforts.</p>
+<div class="admonition summary">
+<p class="admonition-title">Summary</p>
+<ul>
+<li>API-driven cloud-native security fabric that<ul>
+<li>centrally monitors security events,</li>
+<li>visualizes risk management,</li>
+<li>automates compliance audits, and</li>
+<li>orchestrates near real-time remediation.</li>
+</ul>
+</li>
+</ul>
+</div>
+<h4 id="9-usable-security">(9) Usable security</h4>
+<p>Security benefits from transparency, and should operate as an open-book. This
+allows the entire organization to take responsibility for and accountability of
+adopting security best practices. Similar to code reviews and pull requests in
+the development process, CloudCore security team makes security standards and
+practices available to all employees for feedback prior to adoption.</p>
+<p>We emphasize on the usability and practicality of security. A security solution
+or process is not effective, if it is not being used, no matter how good it may
+be. Having impractical security would only generate noise, provide a false sense
+of security, and incur unnecessary cost. Nothing is perfect, but we embrace an
+agile mindset to test and try, and to continuously improve.</p>
+<div class="admonition summary">
+<p class="admonition-title">Summary</p>
+<ul>
+<li>All employees receive security awareness training not annually, but monthly.</li>
+<li>Simple policies, processes, and procedures.</li>
+<li>No “Shadow IT”.</li>
+<li>DevSecOps with common goals and an integrated team.</li>
+<li>Processes that encourage self management and reward good behavior.</li>
+</ul>
+</div>
+<h4 id="10-regulatory-compliant-and-hacker-verified">(10) Regulatory compliant and hacker verified</h4>
+<p>Security != Compliance. We cannot have one without the other.</p>
+<div class="admonition summary">
+<p class="admonition-title">Summary</p>
+<ul>
+<li>Regulatory Compliant;</li>
+<li>Independently assessed and certified;</li>
+<li>Hacker verified.</li>
+</ul>
+</div>
+<h3 id="security-architecture">Security Architecture</h3>
+<p>CloudCore developed a security architecture on top of its three main
+infrastructure environments - Cloud (AWS), DevOps, and workforce collaboration /
+end-user computing.</p>
+<h4 id="architecture-diagrams">Architecture Diagrams</h4>
+<p>Detailed architecture diagrams of the in-scope networks, endpoints, applications
+as well as the security operations are developed and maintained by JupiterOne.</p>
+<h4 id="cloud-architecture">Cloud Architecture</h4>
+<h5 id="cloud-native">Cloud Native</h5>
+<ul>
+<li>Designed for the cloud using true multi-tenant architecture</li>
+<li>Auto scaling across multiple data centers in multiple regions around the world</li>
+<li>CloudCore services deployed inside private subnets of Virtual Private Cloud (VPC)</li>
+<li>Comprehensive security and compliance via AWS certifications</li>
+<li>Ongoing security testing by AWS and AWS customers</li>
+</ul>
+<h5 id="customer-benefits">Customer Benefits</h5>
+<ul>
+<li>Infrastructure is tailored to our customer's goals and usage patterns</li>
+<li>"Shared use" model reduces cost</li>
+<li>Nearly infinite compute and data capacity via AWS cloud provider</li>
+<li>Customers can focus on solving business problems and not worry about infrastructure</li>
+<li>Automatic backup and recovery</li>
+<li>Continuous improvements via change control process</li>
+<li>Faster adoption of new technology</li>
+</ul>
+<h5 id="evolution-of-cloud-computing">Evolution of Cloud Computing</h5>
+<ol>
+<li>
+<p>Baremetal</p>
+<ul>
+<li>A computer in someone else's data center</li>
+</ul>
+</li>
+<li>
+<p>Virtual Machine</p>
+<ul>
+<li>A portion of a computer in someone else's data center</li>
+<li>In AWS, a Virtual Machine is created from Amazon Machine Image (AMI)</li>
+</ul>
+</li>
+<li>
+<p>Container</p>
+<ul>
+<li>A package of essential application libraries and code but not
+  the core OS libraries - Simpler to scale a docker image because - No
+  duplication of core OS processes (networking, filesystem, etc) - Typically
+  a Docker container</li>
+</ul>
+</li>
+<li>
+<p>Function</p>
+<ul>
+<li>Just the application code that runs in a pre-built container</li>
+</ul>
+</li>
+</ol>
+<p>CloudCore strives to leverage functions as the primary building
+blocks for our platform because:</p>
+<ul>
+<li>functions deploy more quickly than containers and virtual machines</li>
+<li>AWS automatically scales Lambda functions based on the number of incoming invocations</li>
+<li>they are short-lived processes which minimizes attack surface</li>
+</ul>
+<h3 id="metrics-measurements-and-continuous-monitoring">Metrics, Measurements and Continuous Monitoring</h3>
+<p>A set of metrics / KPIs have been defined to assist in the measuring, reporting
+and optimizing the security program and the controls in place.</p>
+<p>A security scorecard is produced every  with updates
+to key metrics of the CloudCore information security program, to
+measure its adoption and effectiveness.</p>
+<p>The reports and scorecards are maintained by and can be accessed at JupiterOne.</p>
+<h3 id="quality-of-service">Quality of Service</h3>
+<p>CloudCore strives to provide a high quality of service
+to all of its customers. This is accomplished through a security
+architecture that encompasses all of CloudCore's operations
+and provides high data confidentiality, integrity, and availability.</p>
+<p>An overview of CloudCore's architecture can be found in
+<a href="cp-model-architecture.md">Security Architecture</a>.
+CloudCore uses a highly scalable cloud architecture to
+provide system quality at all times.</p>
+<p>All systems are monitored and measured in real time as described in
+<a href="cp-bcdr-app.md">Application Service Event Recovery</a>.</p>
+<p>CloudCore uses DevOps methodology as described in
+<a href="cp-sdlc-dev.md">Software Development Process</a>
+to ensure a smooth delivery process of all systems and applications.</p>
+<p>Status for external facing, customer applications and systems is published
+at .</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 <a href="https://github.com/james-willett"  target="_blank" rel="noopener">James Willett</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>

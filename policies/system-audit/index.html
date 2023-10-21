@@ -1,0 +1,1797 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://james-willett.github.io/mkdocs-material-youtube-tutorial/policies/system-audit/">
+      
+      
+        <link rel="prev" href="../sdlc/">
+      
+      
+        <link rel="next" href="../threat/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>System Audits, Monitoring and Assessments - CloudCore Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#system-audits-monitoring-and-assessments" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CloudCore Documentation" class="md-header__button md-logo" aria-label="CloudCore Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CloudCore Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              System Audits, Monitoring and Assessments
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      CloudCore
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../interviews/interview-CISO/" class="md-tabs__link">
+        Interviews
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Policies
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../support/ISMS/" class="md-tabs__link">
+        Support
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CloudCore Documentation" class="md-nav__button md-logo" aria-label="CloudCore Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    CloudCore Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        CloudCore
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Interviews
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Interviews
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-CISO/" class="md-nav__link">
+        interview CISO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-data-protection-officer/" class="md-nav__link">
+        Interview data protection officer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-database-administrator/" class="md-nav__link">
+        Interview database administrator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-facilities-manager/" class="md-nav__link">
+        Interview facilities manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-helpdesk/" class="md-nav__link">
+        Interview helpdesk
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-infromation-security-manager/" class="md-nav__link">
+        Interview infromation security manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-legal/" class="md-nav__link">
+        Interview legal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-network-engineer/" class="md-nav__link">
+        Interview network engineer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-system-administrator/" class="md-nav__link">
+        Interview system administrator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-typicall-employee/" class="md-nav__link">
+        Interview typicall employee
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-vendor/" class="md-nav__link">
+        Interview vendor
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Policies
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Policies
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        CloudCore Security Policies, Standards, and Procedures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../access/" class="md-nav__link">
+        Access
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../approved-software/" class="md-nav__link">
+        Approved software
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../approved-vendors/" class="md-nav__link">
+        Approved vendors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../asset-mgmt/" class="md-nav__link">
+        Asset Inventory Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bcdr/" class="md-nav__link">
+        Business Continuity and Disaster Recovery
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../breach/" class="md-nav__link">
+        Breach Investigation and Notification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ccm/" class="md-nav__link">
+        Configuration and Change Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compliance-audit/" class="md-nav__link">
+        Compliance Audits and External Communications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cookie-policy/" class="md-nav__link">
+        Cookie policy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-mgmt/" class="md-nav__link">
+        Data Management Policy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-protection/" class="md-nav__link">
+        Data Protection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../definitions/" class="md-nav__link">
+        Definitions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../employee-handbook/" class="md-nav__link">
+        Employee handbook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../facility/" class="md-nav__link">
+        Facility Access and Physical Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gdpr-dpa/" class="md-nav__link">
+        Gdpr dpa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hipaa-baa/" class="md-nav__link">
+        Hipaa baa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hipaa-mapping/" class="md-nav__link">
+        Hipaa mapping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hr/" class="md-nav__link">
+        HR and Personnel Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ir/" class="md-nav__link">
+        Incident Response
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mdm/" class="md-nav__link">
+        Mobile Device Security and Storage Media Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model/" class="md-nav__link">
+        Security Architecture and Operating Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nist-mapping/" class="md-nav__link">
+        Nist mapping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policy-mgmt/" class="md-nav__link">
+        Policy Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../privacy-policy/" class="md-nav__link">
+        Privacy policy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../privacy/" class="md-nav__link">
+        Privacy and Consent
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../program/" class="md-nav__link">
+        Security Program Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rar/" class="md-nav__link">
+        Roles, Responsibilities and Training
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref/" class="md-nav__link">
+        Addendum and References
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../risk-mgmt/" class="md-nav__link">
+        Risk Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdlc/" class="md-nav__link">
+        Secure Software Development and Product Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          System Audits, Monitoring and Assessments
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        System Audits, Monitoring and Assessments
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#policy-statements" class="md-nav__link">
+    Policy Statements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controls-and-procedures" class="md-nav__link">
+    Controls and Procedures
+  </a>
+  
+    <nav class="md-nav" aria-label="Controls and Procedures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-system-audits" class="md-nav__link">
+    Types of System Audits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-events-analysis" class="md-nav__link">
+    Security Events Analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internalmanual-auditing-activities" class="md-nav__link">
+    Internal/Manual Auditing Activities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audit-requests" class="md-nav__link">
+    Audit Requests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#review-and-reporting-of-audit-findings" class="md-nav__link">
+    Review and Reporting of Audit Findings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remediation-of-control-deficiencies" class="md-nav__link">
+    Remediation of Control Deficiencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audit-trails-and-application-security-events-logging-standard" class="md-nav__link">
+    Audit Trails and Application Security Events Logging Standard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audit-trail-integrity-security-controls-and-log-retention" class="md-nav__link">
+    Audit Trail Integrity - Security Controls and Log Retention
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auditing-customer-and-partner-activity" class="md-nav__link">
+    Auditing Customer and Partner Activity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auditing-and-assessment-tools" class="md-nav__link">
+    Auditing and Assessment Tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-education-awareness-and-responsibilities" class="md-nav__link">
+    Training, Education, Awareness and Responsibilities
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../threat/" class="md-nav__link">
+        Threat Detection and Prevention
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vendor/" class="md-nav__link">
+        Third Party Security, Vendor Risk Management and Systems/Services Acquisition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vuln-mgmt/" class="md-nav__link">
+        Vulnerability Management
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Support
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/ISMS/" class="md-nav__link">
+        CloudCore Networks Information Security Management System
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/Preparing%20ISO%2027001/" class="md-nav__link">
+        Preparing ISO 27001
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/Risk%20Register/" class="md-nav__link">
+        Risk Register
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/Training/" class="md-nav__link">
+        Training
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/network-logical/" class="md-nav__link">
+        Network logical
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/org-chart-names-full/" class="md-nav__link">
+        Org chart names full
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="system-audits-monitoring-and-assessments">System Audits, Monitoring and Assessments</h1>
+<p><code>2023.1</code></p>
+<p>CloudCore shall audit, monitor, and assess the access and activity of
+systems and applications that process or store production and/or sensitive data
+such as personally identifiable information (PII)
+and electronic protected health information (ePHI)
+in order to ensure compliance.</p>
+<p>It is required by the HIPAA Security Rule, that healthcare organizations to
+implement reasonable hardware, software, and/or procedural mechanisms that
+record and examine activity in information systems that contain or use ePHI.</p>
+<p>Audit activities may be limited by application, system, and/or network auditing
+capabilities and resources. CloudCore shall make reasonable and
+good-faith efforts to safeguard information privacy and security through a
+well-thought-out approach to auditing that is consistent with available
+resources.</p>
+<p>It is the policy of CloudCore to safeguard the confidentiality, integrity, and
+availability of applications, systems, and networks. To ensure that appropriate
+safeguards are in place and effective, CloudCore shall audit access and activity
+to detect, report, and guard against:</p>
+<ul>
+<li>Network vulnerabilities and intrusions;</li>
+<li>Breaches in confidentiality and security of sensitive information;</li>
+<li>Performance problems and flaws in applications;</li>
+<li>Improper alteration or destruction of sensitive information;</li>
+<li>Out of date software and/or software known to have vulnerabilities.</li>
+</ul>
+<p>This policy applies to all CloudCore systems that store, transmit, or process
+sensitive information.</p>
+<h2 id="policy-statements">Policy Statements</h2>
+<p>CloudCore policy requires that:</p>
+<p>(a) All critical computing systems and software, both virtual and physical, must
+enable audit logging.</p>
+<p>(b) Audit logs must include sufficient information to identify who did what,
+when, where.</p>
+<p>(c) An annual audit of CloudCore security controls must be conducted, either by a
+designated internal audit team or a qualified external audit firm.</p>
+<h2 id="controls-and-procedures">Controls and Procedures</h2>
+<h3 id="types-of-system-audits">Types of System Audits</h3>
+<p>CloudCore's auditing processes include the following.</p>
+<ol>
+<li>
+<p><strong>Configuration and Activity Monitoring:</strong> This refers to the logging,
+   monitoring, scanning and alerting of a system, account, or environment, which
+   may be achieved using real-time automated scripts/software or a manual
+   review/testing. This type of auditing is performed <em>continuously</em> as part of
+   CloudCore operations.</p>
+<div class="admonition tip">
+<p class="admonition-title">Examples include:</p>
+<ul>
+<li>User: User and account-level audit trails generally monitor and log all commands directly initiated by the user, all identification and authentication attempts, and data and services accessed.</li>
+<li>Application: Application-level audit trails generally monitor and log all user activities, including data accessed and modified and specific actions.</li>
+<li>System: System-level audit trails generally monitor and log user activities, applications accessed, file integrity, and other system-defined specific actions.</li>
+<li>Network: Network-level scans or audit trails generally monitor information on what is operating, perform penetrations, and identify vulnerabilities.</li>
+<li>Traffic: Traffic refers to the incoming and outgoing traffic into and out of production/restricted environments. For example, firewall logs or VPC flow logs in AWS.</li>
+<li>Data: Data includes all successful and failed attempts at production data access and editing.</li>
+</ul>
+<p><em>Data associated with above events will include origin, destination, action performed, timestamp, and other relevant details available.</em></p>
+</div>
+</li>
+<li>
+<p><strong>Access Review:</strong> This refers to the review of all user and service accounts
+   and permissions across CloudCore operational environments, including
+   on-premise systems, cloud environments such as AWS accounts, and other
+   applications such as collaboration software, ticketing system and code repos.</p>
+<ul>
+<li>CloudCore developed an internal tool to automatically pull configurations
+  from our cloud based environments, including<ul>
+<li>AWS access configuration from IAM policies, EC2 VPC and security group
+  settings, S3 bucket policies, Lambda and API Gateway resources, etc.;</li>
+<li>Users, groups, application access from Okta IdP;</li>
+<li>Network access settings from Cisco Meraki, etc.</li>
+</ul>
+</li>
+<li>The data is collected either on demand triggered by security team or by
+  changes in the operational environment.</li>
+<li>The data is used by the tool to aggregate and analyze user and application
+  access.</li>
+<li>Access to other systems and applications that are not covered by this
+  automated tool are reviewed manually on a quarterly
+  basis or with any significant change to the target environment.</li>
+<li>As a result of each review, unused or invalid access will be removed.</li>
+</ul>
+</li>
+<li>
+<p><strong>Compliance and Controls Audit:</strong> This refers to the audit performed against
+   the Technical, Administrative, and/or Physical controls as defined in
+   CloudCore policies and procedures, to measure their adoption and
+   effectiveness.  This type of auditing is typically performed by either a
+   designated internal audit team or an external audit firm, at <em>defined
+   intervals</em> or prompted by a <em>trigger event</em>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Potential trigger events include:</p>
+<ul>
+<li>Scheduled compliance audit/assessment (e.g. annual risk assessment)</li>
+<li>High risk or problem prone incidents or events, or as part of post-incident activities</li>
+<li>Business associate, customer, or partner complaints</li>
+<li>Identification of significant security vulnerabilities</li>
+<li>Atypical patterns of activity</li>
+<li>Failed authentication attempts</li>
+<li>Remote access use and activity</li>
+<li>Activity post termination</li>
+<li>Random audits</li>
+</ul>
+</div>
+</li>
+</ol>
+<h3 id="security-events-analysis">Security Events Analysis</h3>
+<p>Security logs, events, and audit trails are reviewed by the security team with
+the assistance of automated systems and processes.</p>
+<ul>
+<li>Auditing logs are automatically analyzed and correlated by the monitoring
+  solutions and/or a centralized security information and event management
+  system.</li>
+<li>The systems are configured with rules/policies to identify suspicious
+  activities, vulnerabilities and misconfigurations.  </li>
+<li>Alerts are triggered upon identification of an issue based on the policy
+  configuration.  </li>
+<li>The alerts are sent immediately to the responsible staff (e.g. security team)
+  for analysis. The alerts may be sent via email, Slack messaging, or as
+  notification on the monitoring dashboard.</li>
+<li>Analysis is prioritized based on alert severity.  High severity alerts are
+  typically reviewed within 24 hours.</li>
+<li>Incident response process is followed, as needed.</li>
+<li>Patches and updates will be applied to all systems in a timely manner.</li>
+</ul>
+<h3 id="internalmanual-auditing-activities">Internal/Manual Auditing Activities</h3>
+<p>Additional manual reviews, such as user accounts and access auditing, may be
+necessary from time to time. These activities may be triggered by the events
+listed above.</p>
+<ul>
+<li>
+<p>Responsibility for audit activity is assigned to CloudCore's Security Officer.
+  The Security Officer shall:</p>
+<ul>
+<li>Assign the task of generating reports for audit activities to the
+  workforce member responsible for the application, system, or network;</li>
+<li>Assign the task of reviewing the audit reports to the workforce member
+  responsible for the application, system, or network, the Privacy Officer,
+  or any other individual determined to be appropriate for the task;</li>
+<li>Organize and provide oversight to a team structure charged with audit
+  compliance activities (e.g., parameters, frequency, sample sizes, report
+  formats, evaluation, follow-up, etc.).</li>
+<li>All connections to CloudCore are monitored. Access is limited to certain
+  services, ports, and destinations. Exceptions to these rules, if created,
+  are reviewed on an annual basis.</li>
+</ul>
+</li>
+<li>
+<p>The manual review process shall define and include:</p>
+<ul>
+<li>Description of the activity as well as rationale for performing the audit.</li>
+<li>Identification of personnel to perform the review (workforce members shall
+  not review audit logs that pertain to their own system activity).</li>
+<li>Frequency of the auditing process.</li>
+<li>Determination of significant events requiring further review and
+  follow-up.</li>
+<li>Identification of appropriate reporting channels for audit results and
+  required follow-up.</li>
+</ul>
+</li>
+<li>
+<p>Manual audits and reviews activities are tracked in .</p>
+</li>
+<li>
+<p>Auditing, reviews and testing may be carried out internally or provided
+  through an external third-party vendor. Whenever possible, a third party
+  auditing vendor should not be providing the organization IT oversight services
+  (e.g., vendors providing IT services should not be auditing their own services
+  to ensure separation of duties).</p>
+</li>
+</ul>
+<h3 id="audit-requests">Audit Requests</h3>
+<ol>
+<li>
+<p>A request may be made for an audit for a specific cause. The request may come
+   from a variety of sources including, but not limited to, Privacy Officer,
+   Security Officer, Customer, Partner, or an Application owner or application
+   user.</p>
+</li>
+<li>
+<p>A request for an audit for specific cause must include time frame, frequency,
+   and nature of the request.</p>
+</li>
+<li>
+<p>A request for an audit must be reviewed and approved by CloudCore's Privacy
+   Officer and/or Security Officer before proceeding. Under no circumstances
+   shall detailed audit information be shared with parties without proper
+   permissions and access to see such data.</p>
+<ul>
+<li>Should the audit disclose that a workforce member has accessed sensitive data
+  inappropriately, the minimum necessary/least privileged information shall
+  be shared with CloudCore's Security Officer to determine appropriate
+  sanction/corrective disciplinary action.</li>
+<li>Only de-identified information shall be shared with Customer or Partner
+  regarding the results of the investigative audit process. This information
+  will be communicated to the appropriate personnel by CloudCore's Privacy
+  Officer or designee. Prior to communicating with customers and partners
+  regarding an audit, it is recommended that CloudCore consider seeking
+  guidance from risk management and/or legal counsel.</li>
+</ul>
+</li>
+</ol>
+<h3 id="review-and-reporting-of-audit-findings">Review and Reporting of Audit Findings</h3>
+<ol>
+<li>
+<p>Audit information that is routinely gathered must be reviewed in a timely
+   manner, at least monthly, by the responsible workforce member(s).
+   Additional reviews are performed as needed to assure the proper data is being
+   captured and retained.</p>
+</li>
+<li>
+<p>The reporting process shall allow for meaningful communication of the audit
+   findings to relevant workforce members, Customers, or Partners.</p>
+<ul>
+<li>Significant findings shall be reported immediately in a written format.
+  CloudCore's security incident response form may be utilized to report a
+  single event.</li>
+<li>Routine findings shall be reported to the sponsoring leadership structure
+  in a written report format.</li>
+</ul>
+</li>
+<li>
+<p>Reports of audit results shall be limited to internal use on a minimum
+   necessary/need-to-know basis. Audit results shall not be disclosed externally
+   without administrative and/or legal counsel approval.</p>
+</li>
+<li>
+<p>Security audits constitute an internal, confidential monitoring practice that
+   may be included in CloudCore's performance improvement activities and
+   reporting. Care shall be taken to ensure that the results of the audits are
+   disclosed to administrative-level oversight structures only and that
+   information which may further expose organizational risk is shared with
+   extreme caution. Generic security audit information may be included in
+   organizational reports (individually-identifiable information shall not be
+   included in the reports).</p>
+</li>
+<li>
+<p>Whenever indicated through evaluation and reporting, appropriate corrective
+   actions must be undertaken. These actions shall be documented and shared with
+   the responsible workforce members, Customers, and/or Partners.</p>
+</li>
+</ol>
+<h3 id="remediation-of-control-deficiencies">Remediation of Control Deficiencies</h3>
+<p>Most controls are continuously monitored and reported via automation on the
+JupiterOne platform.</p>
+<p>Control deficiencies identified as a result of an internal or external system
+audit are documented and reviewed with management.</p>
+<p>Security team works with the corresponding control owner to prioritize and
+mitigate the control deficiency, including applying corrective actions,
+implementating additional controls or adjusting existing controls as needed.</p>
+<h3 id="audit-trails-and-application-security-events-logging-standard">Audit Trails and Application Security Events Logging Standard</h3>
+<p>CloudCore logging standards requires application and system logs to contain
+sufficient information to determine <strong>who did what, when, where</strong> to ensure
+recording of security and audit events and to generate evidence for unauthorized
+activities.</p>
+<p>All systems and software developed at CloudCore must have the following security
+events logging enabled as part of or in addition to standard application
+logging.</p>
+<ol>
+<li>
+<p>All security log events must have the following attributes at minimum:</p>
+<ul>
+<li>Timestamp of the event (synchronized to approved time server)</li>
+<li>Identifier of the principal performing the action (such as user ID)</li>
+<li>Location including both origin (such as hostname/IP) and target (such as
+  host/service/resource)</li>
+<li>Activity or action (such as log in, log out, create, read, update, delete
+  of a resource)</li>
+<li>the action may be logged as and determined by the HTTP request method
+     and the API endpoint </li>
+<li>Event description and additional details may be logged depending on the
+  system or application </li>
+</ul>
+</li>
+<li>
+<p>The following types of security events must be logged at minimum:</p>
+<ul>
+<li>User and group administration activities (user or group added, updated,
+  deleted, access granted/revoked)</li>
+<li>All login attempts, successful and unsuccessful including the source IP
+  address</li>
+<li>All interactive logoffs</li>
+<li>Privileged actions (configuration changes, application shutdown/restart,
+  software update etc)</li>
+<li>Major application events (e.g. application failure, start and restart,
+  shutdown)</li>
+<li>Any and all actions performed on critical resources such as production
+  data</li>
+</ul>
+</li>
+<li>
+<p>All application and system logs must not include (removed or masked):</p>
+<ul>
+<li>
+<p>Any sensitive information, including
+  protected health information (PHI),
+  personally identifiable information (PII)</p>
+</li>
+<li>
+<p>except for IP addresses</p>
+</li>
+<li>usernames/logins may/should be logged as part of authentication logging</li>
+<li>
+<p>for user action auditing, opaque IDs should be used instead of
+    usernames/logins whenever possible</p>
+</li>
+<li>
+<p>Authentication and session tokens, user credentials</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Security events and audit logs must be:</p>
+<ul>
+<li>Always accessible to the monitoring system/team</li>
+<li>Protected from any changes</li>
+<li>Monitored with alerting mechanism in place (including alert for not
+  receiving log events for a certain period of time)</li>
+</ul>
+</li>
+<li>
+<p>All CloudCore IT infrastructure must have system clock synchronized</p>
+</li>
+</ol>
+<p><em>Examples of recommended application events for logging and their auditing purpose:</em></p>
+<table>
+<thead>
+<tr>
+<th>Events</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Client requests and server responses</td>
+<td>forensics and debugging - details level is defined by application</td>
+</tr>
+<tr>
+<td>Successful and unsuccessful login attempts</td>
+<td>authentication</td>
+</tr>
+<tr>
+<td>Successful and failed access to application resources</td>
+<td>authorization, escalation of privileges</td>
+</tr>
+<tr>
+<td>Excessive amount of requests from the client</td>
+<td>brute-forcing, malicious bots, denial of service attacks</td>
+</tr>
+<tr>
+<td>E-mails sent by an application</td>
+<td>spamming, social engineering</td>
+</tr>
+</tbody>
+</table>
+<p><em>Details of the logging configuration is documented at</em></p>
+<ul>
+<li><a href="">Application Logging - documented on the Engineering Wiki</a></li>
+<li><a href="https://developer.okta.com/docs/api/resources/system_log">Identity and Access Activity Logs via Okta</a></li>
+<li><a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-log-file-examples.html">AWS Cloudtrail</a></li>
+<li><a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html">AWS S3 Server Access Logs</a></li>
+</ul>
+<h3 id="audit-trail-integrity-security-controls-and-log-retention">Audit Trail Integrity - Security Controls and Log Retention</h3>
+<ol>
+<li>Audit logs shall be protected from unauthorized access or modification, so
+   the information they contain will be made available only if needed to
+   evaluate a security incident or for routine audit activities as outlined in
+   this policy.</li>
+<li>All audit logs are protected in transit and encrypted at rest to control
+   access to the content of the logs.</li>
+<li>
+<p>Whenever possible, audit logs shall be stored on a separate system to
+   minimize the impact auditing may have on the privacy system and to prevent
+   access to audit trails by those with system administrator privileges.</p>
+<ul>
+<li>Separate systems are used to apply the security principle of "separation
+  of duties" to protect audit trails from hackers.</li>
+<li>CloudCore logging servers may include Elasticsearch, Logstash, and Kibana
+  (ELK) as part of their baseline configuration to ease reviewing of audit
+  log data. The ELK toolkit provides message summarization, reduction, and
+  reporting functionality.</li>
+</ul>
+</li>
+<li>
+<p>Reports summarizing audit activities shall be retained for a period of seven
+   years.</p>
+</li>
+<li>Audit log data is retained locally on the audit log server or in the source
+   environment for a period of one month. Beyond that, log data is encrypted and
+   moved to warm storage (currently S3) using automated scripts, and is retained
+   for a minimum of one year.</li>
+<li>Raw event data may be purged after one month / 30 days as long as the
+   required details are sufficiently covered in aggregated audit logs/reports.</li>
+</ol>
+<h3 id="auditing-customer-and-partner-activity">Auditing Customer and Partner Activity</h3>
+<ol>
+<li>
+<p>Periodic monitoring of Customer and Partner activity shall be carried out to
+   ensure that access and activity is appropriate for privileges granted and
+   necessary to the arrangement between CloudCore and the 3rd party.
+   CloudCore will make every effort to assure Customers and Partners
+   do not gain access to data outside of their own environments.</p>
+</li>
+<li>
+<p>If it is determined that the Customer or Partner has exceeded the scope of
+   access privileges, CloudCore's management and security must remedy
+   the problem immediately.</p>
+</li>
+<li>
+<p>If it is determined that a Customer or Partner has violated the terms of the
+   HIPAA business associate agreement or any terms within the HIPAA regulations,
+   CloudCore must take immediate action to remediate the situation. Continued
+   violations may result in discontinuation of the business relationship.</p>
+</li>
+</ol>
+<h3 id="auditing-and-assessment-tools">Auditing and Assessment Tools</h3>
+<p>CloudCore's Security Officer is authorized to select and use assessment tools
+that are designed to detect vulnerabilities and intrusions. Use of such tools
+against CloudCore systems and environments are prohibited by others, including
+Customers and Partners, without the explicit authorization of the Security
+Officer. These tools may include, but are not limited to:</p>
+<ul>
+<li>Scanning tools and devices;</li>
+<li>Password cracking utilities;</li>
+<li>Network "sniffers";</li>
+<li>Security agents installed locally on servers and endpoints;</li>
+<li>Passive and active intrusion detection systems; and</li>
+<li>Penetration testing tools.</li>
+</ul>
+<p>Vulnerability testing software may be used to probe the network to identify what
+is running (e.g., operating system or product versions in place), whether
+publicly-known vulnerabilities have been corrected, and evaluate whether the
+system can withstand attacks aimed at circumventing security controls.</p>
+<h3 id="training-education-awareness-and-responsibilities">Training, Education, Awareness and Responsibilities</h3>
+<ol>
+<li>
+<p>CloudCore workforce members are provided training, education, and
+   awareness on safeguarding the privacy and security of business and data.
+   CloudCore's commitment to auditing access and activity of the
+   information applications, systems, and networks is communicated through new
+   employee orientation, ongoing training opportunities and events, and
+   applicable policies. CloudCore workforce members are made aware of
+   responsibilities with regard to privacy and security of information as well
+   as applicable sanctions/corrective disciplinary actions should the auditing
+   process detect a workforce member's failure to comply with organizational
+   policies.</p>
+</li>
+<li>
+<p>CloudCore Customers are provided with necessary information to understand
+   CloudCore auditing capabilities. Platform Customers are responsible for the
+   logging, auditing and retention of any application hosted outside of CloudCore
+   environments, even though the applications may integrate with CloudCore
+   Platform API.  Customer applications hosted within the CloudCore environments
+   will follow the auditing standards and procedures defined in this document.</p>
+</li>
+</ol>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 <a href="https://github.com/james-willett"  target="_blank" rel="noopener">James Willett</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>

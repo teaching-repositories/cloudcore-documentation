@@ -1,0 +1,1643 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://james-willett.github.io/mkdocs-material-youtube-tutorial/policies/breach/">
+      
+      
+        <link rel="prev" href="../bcdr/">
+      
+      
+        <link rel="next" href="../ccm/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>Breach Investigation and Notification - CloudCore Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#breach-investigation-and-notification" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CloudCore Documentation" class="md-header__button md-logo" aria-label="CloudCore Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CloudCore Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Breach Investigation and Notification
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      CloudCore
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../interviews/interview-CISO/" class="md-tabs__link">
+        Interviews
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Policies
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../support/ISMS/" class="md-tabs__link">
+        Support
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CloudCore Documentation" class="md-nav__button md-logo" aria-label="CloudCore Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    CloudCore Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        CloudCore
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Interviews
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Interviews
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-CISO/" class="md-nav__link">
+        interview CISO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-data-protection-officer/" class="md-nav__link">
+        Interview data protection officer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-database-administrator/" class="md-nav__link">
+        Interview database administrator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-facilities-manager/" class="md-nav__link">
+        Interview facilities manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-helpdesk/" class="md-nav__link">
+        Interview helpdesk
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-infromation-security-manager/" class="md-nav__link">
+        Interview infromation security manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-legal/" class="md-nav__link">
+        Interview legal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-network-engineer/" class="md-nav__link">
+        Interview network engineer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-system-administrator/" class="md-nav__link">
+        Interview system administrator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-typicall-employee/" class="md-nav__link">
+        Interview typicall employee
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-vendor/" class="md-nav__link">
+        Interview vendor
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Policies
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Policies
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        CloudCore Security Policies, Standards, and Procedures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../access/" class="md-nav__link">
+        Access
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../approved-software/" class="md-nav__link">
+        Approved software
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../approved-vendors/" class="md-nav__link">
+        Approved vendors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../asset-mgmt/" class="md-nav__link">
+        Asset Inventory Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bcdr/" class="md-nav__link">
+        Business Continuity and Disaster Recovery
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Breach Investigation and Notification
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Breach Investigation and Notification
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#policy-statements" class="md-nav__link">
+    Policy Statements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controls-and-procedures" class="md-nav__link">
+    Controls and Procedures
+  </a>
+  
+    <nav class="md-nav" aria-label="Controls and Procedures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breach-investigation-process" class="md-nav__link">
+    Breach Investigation Process
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloudcore-platform-customer-responsibilities" class="md-nav__link">
+    CloudCore Platform Customer Responsibilities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-letter-to-customers-in-case-of-breach" class="md-nav__link">
+    Sample Letter to Customers in Case of Breach
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-of-contacts-for-authorities" class="md-nav__link">
+    List of Contacts for Authorities
+  </a>
+  
+    <nav class="md-nav" aria-label="List of Contacts for Authorities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#health-and-human-services" class="md-nav__link">
+    Health and Human Services
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#federal-trade-commission" class="md-nav__link">
+    Federal Trade Commission
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indianapolis-metropolitan-police-department" class="md-nav__link">
+    Indianapolis Metropolitan Police Department
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#federal-bureau-of-investigation-indianapolis-office" class="md-nav__link">
+    Federal Bureau of Investigation Indianapolis Office
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ccm/" class="md-nav__link">
+        Configuration and Change Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compliance-audit/" class="md-nav__link">
+        Compliance Audits and External Communications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cookie-policy/" class="md-nav__link">
+        Cookie policy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-mgmt/" class="md-nav__link">
+        Data Management Policy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-protection/" class="md-nav__link">
+        Data Protection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../definitions/" class="md-nav__link">
+        Definitions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../employee-handbook/" class="md-nav__link">
+        Employee handbook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../facility/" class="md-nav__link">
+        Facility Access and Physical Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gdpr-dpa/" class="md-nav__link">
+        Gdpr dpa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hipaa-baa/" class="md-nav__link">
+        Hipaa baa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hipaa-mapping/" class="md-nav__link">
+        Hipaa mapping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hr/" class="md-nav__link">
+        HR and Personnel Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ir/" class="md-nav__link">
+        Incident Response
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mdm/" class="md-nav__link">
+        Mobile Device Security and Storage Media Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model/" class="md-nav__link">
+        Security Architecture and Operating Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nist-mapping/" class="md-nav__link">
+        Nist mapping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policy-mgmt/" class="md-nav__link">
+        Policy Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../privacy-policy/" class="md-nav__link">
+        Privacy policy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../privacy/" class="md-nav__link">
+        Privacy and Consent
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../program/" class="md-nav__link">
+        Security Program Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rar/" class="md-nav__link">
+        Roles, Responsibilities and Training
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref/" class="md-nav__link">
+        Addendum and References
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../risk-mgmt/" class="md-nav__link">
+        Risk Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdlc/" class="md-nav__link">
+        Secure Software Development and Product Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-audit/" class="md-nav__link">
+        System Audits, Monitoring and Assessments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../threat/" class="md-nav__link">
+        Threat Detection and Prevention
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vendor/" class="md-nav__link">
+        Third Party Security, Vendor Risk Management and Systems/Services Acquisition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vuln-mgmt/" class="md-nav__link">
+        Vulnerability Management
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Support
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/ISMS/" class="md-nav__link">
+        CloudCore Networks Information Security Management System
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/Preparing%20ISO%2027001/" class="md-nav__link">
+        Preparing ISO 27001
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/Risk%20Register/" class="md-nav__link">
+        Risk Register
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/Training/" class="md-nav__link">
+        Training
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/network-logical/" class="md-nav__link">
+        Network logical
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/org-chart-names-full/" class="md-nav__link">
+        Org chart names full
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="breach-investigation-and-notification">Breach Investigation and Notification</h1>
+<p><code>2023.1</code></p>
+<p>To provide guidance for breach notification when impressive or unauthorized
+access, acquisition, use and/or disclosure of the ePHI occurs. Breach
+notification will be carried out in compliance with the American Recovery and
+Reinvestment Act (ARRA)/Health Information Technology for Economic and Clinical
+Health Act (HITECH) as well as any other federal or state notification law.</p>
+<p>The Federal Trade Commission (FTC) has published breach notification rules for
+vendors of personal health records as required by ARRA/HITECH. The FTC rule
+applies to entities not covered by HIPAA, primarily vendors of personal health
+records. The rule is effective September 24, 2009 with full compliance required
+by February 22, 2010.</p>
+<p>The American Recovery and Reinvestment Act of 2009 (ARRA) was signed into law on
+February 17, 2009. Title XIII of ARRA is the Health Information Technology for
+Economic and Clinical Health Act (HITECH). HITECH significantly impacts the
+Health Insurance Portability and Accountability (HIPAA) Privacy and Security
+Rules. While HIPAA did not require notification when patient protected health
+information (PHI) was inappropriately disclosed, covered entities and business
+associates may have chosen to include notification as part of the mitigation
+process. HITECH does require notification of certain breaches of unsecured PHI
+to the following: individuals, Department of Health and Human Services (HHS),
+and the media. The effective implementation for this provision is September 23,
+2009 (pending publication HHS regulations).</p>
+<p>In the case of a breach, CloudCore shall notify all affected
+Customers. It is the responsibility of the Customers to notify affected
+individuals.</p>
+<h2 id="policy-statements">Policy Statements</h2>
+<p>CloudCore policy requires that:</p>
+<p>(a) Breach notification procedures are invoked upon confirmation of security
+breach that results in unauthorized disclosure of unprotected/unencrypted
+sensitive data.</p>
+<p>(b) Individuals impacted by a confirmed data breach must be notified within 60
+days of discovery of such breach.</p>
+<p>(c) In the event of a data breach that involves unencrypted ePHI,
+CloudCore must report the breach to individuals impacted following
+the HIPAA Breach Notification requirements (45 CFR Part 164, Subpart D).</p>
+<h2 id="controls-and-procedures">Controls and Procedures</h2>
+<h3 id="breach-investigation-process">Breach Investigation Process</h3>
+<ol>
+<li>
+<p>Discovery of Breach: A data breach shall be treated as "discovered" as of
+   the first day on which such breach is known to the organization, or, by
+   exercising reasonable diligence would have been known to CloudCore
+   (includes breaches by the organization's Customers, Partners, or
+   subcontractors). CloudCore shall be deemed to have knowledge of a
+   breach if such breach is known or by exercising reasonable diligence would
+   have been known, to any person, other than the person committing the breach,
+   who is a workforce member or Partner of the organization. Following the
+   discovery of a potential breach, the organization shall begin an
+   investigation (see organizational policies for security incident response
+   and/or risk management incident response) immediately, conduct a risk
+   assessment, and based on the results of the risk assessment, begin the
+   process to notify each Customer affected by the breach. CloudCore
+   shall also begin the process of determining what external notifications are
+   required or should be made (e.g., Secretary of Department of Health &amp; Human
+   Services (HHS), media outlets, law enforcement officials, etc.)</p>
+</li>
+<li>
+<p>Breach Investigation: The CloudCore Security Officer shall name an
+   individual to act as the investigator of the breach (e.g., privacy officer,
+   security officer, risk manager, etc.). The investigator shall be responsible
+   for the management of the breach investigation, completion of a risk
+   assessment, and coordinating with others in the organization as appropriate
+   (e.g., administration, security incident response team, human resources, risk
+   management, public relations, legal counsel, etc.) The investigator shall be
+   the key facilitator for all breach notification processes to the appropriate
+   entities (e.g., HHS, media, law enforcement officials, etc.). All
+   documentation related to the breach investigation, including the risk
+   assessment, shall be retained for a minimum of seven years. A breach log is
+   kept and maintained by the Security and Privacy Officer.</p>
+</li>
+<li>
+<p>Risk Assessment: A risk assessment is performed in accordance to applicable
+   laws and regulations.</p>
+</li>
+</ol>
+<p>For an acquisition, access, use or disclosure of ePHI to
+   constitute a breach, it must constitute a violation of the HIPAA Privacy
+   Rule. A use or disclosure of ePHI that is incident to an otherwise
+   permissible use or disclosure and occurs despite reasonable safeguards and
+   proper minimum necessary procedures would not be a violation of the Privacy
+   Rule and would not qualify as a potential breach. To determine if an
+   impermissible use or disclosure of ePHI constitutes a breach and requires
+   further notification, the organization will need to perform a risk assessment
+   to determine if there is significant risk of harm to the individual as a
+   result of the impermissible use or disclosure. The organization shall
+   document the risk assessment as part of the investigation in the incident
+   report form noting the outcome of the risk assessment process. The
+   organization has the burden of proof for demonstrating that all notifications
+   to appropriate Customers or that the use or disclosure did not constitute a
+   breach. Based on the outcome of the risk assessment, the organization will
+   determine the need to move forward with breach notification. The risk
+   assessment and the supporting documentation shall be fact specific and
+   address:</p>
+<div class="highlight"><pre><span></span><code>* Consideration of who impermissibly used or to whom the information was
+  impermissibly disclosed;
+* The type and amount of ePHI involved;
+* The cause of the breach, and the entity responsible for the breach, either
+  Customer, CloudCore, or Partner.
+* The potential for significant risk of financial, reputational, or other
+  harm.
+</code></pre></div>
+<ol>
+<li>
+<p>Timeliness of Notification: Upon discovery of a breach, notice shall be made
+   to the affected CloudCore Customers, usually within 24-48 hours
+   but no later than 10 calendar days after the discovery of the breach. It is
+   the responsibility of the organization to demonstrate that all notifications
+   were made as required, including evidence demonstrating the necessity of
+   delay.</p>
+</li>
+<li>
+<p>Delay of Notification Authorized for Law Enforcement Purposes:  If a law
+   enforcement official states to the organization that a notification, notice,
+   or posting would impede a criminal investigation or cause damage to national
+   security, the organization shall:</p>
+<ul>
+<li>If the statement is in writing and specifies the time for which a delay is
+  required, delay such notification, notice, or posting of the timer period
+  specified by the official; or</li>
+<li>If the statement is made orally, document the statement, including the
+  identify of the official making the statement, and delay the notification,
+  notice, or posting temporarily and no longer than 30 days from the date of
+  the oral statement, unless a written statement as described above is
+  submitted during that time.</li>
+</ul>
+</li>
+<li>
+<p>Content of the Notice: The notice shall be written in plain language and must
+   contain the following information:</p>
+<ul>
+<li>A brief description of what happened, including the date of the breach and
+  the date of the discovery of the breach, if known;</li>
+<li>A description of the types of unsecured protected health information that
+  were involved in the breach (such as whether full name, Social Security
+  number, date of birth, home address, account number, diagnosis, disability
+  code or other types of information were involved), if known;</li>
+<li>Any steps the Customer should take to protect Customer data from potential
+  harm resulting from the breach.</li>
+<li>A brief description of what CloudCore is doing to investigate
+  the breach, to mitigate harm to individuals and Customers, and to protect
+  against further breaches.</li>
+<li>Contact procedures for individuals to ask questions or learn additional
+  information, which may include a toll-free telephone number, an e-mail
+  address, a web site, or postal address.</li>
+</ul>
+</li>
+<li>
+<p>Methods of Notification: CloudCore Customers will be notified via
+   email and phone within the timeframe for reporting breaches, as outlined
+   above.</p>
+</li>
+<li>
+<p>Maintenance of Breach Information/Log: As described above and in addition to
+   the reports created for each incident, CloudCore shall maintain a
+   process to record or log all breaches of unsecured sensitive data regardless
+   of the number of records and Customers affected. The following information
+   should be collected/logged for each breach (see sample Breach Notification
+   Log):</p>
+<ul>
+<li>A description of what happened, including the date of the breach, the date
+  of the discovery of the breach, and the number of records and Customers
+  affected, if known.</li>
+<li>A description of the types of unsecured protected health information that
+  were involved in the breach (such as full name, Social Security number,
+  date of birth, home address, account number, etc.), if known.</li>
+<li>A description of the action taken with regard to notification of patients
+  regarding the breach.</li>
+<li>Resolution steps taken to mitigate the breach and prevent future
+  occurrences.</li>
+</ul>
+</li>
+<li>
+<p>Workforce Training: CloudCore shall train all members of its
+   workforce on the policies and procedures with respect to sensitive data as
+   necessary and appropriate for the members to carry out their job
+   responsibilities. Workforce members shall also be trained as to how to
+   identify and report breaches within the organization.</p>
+</li>
+<li>
+<p>Complaints: CloudCore must provide a process for individuals to
+   make complaints concerning the organization's patient privacy policies and
+   procedures or its compliance with such policies and procedures.</p>
+</li>
+<li>
+<p>Sanctions: The organization shall have in place and apply appropriate
+   sanctions against members of its workforce, Customers, and Partners who fail
+   to comply with privacy policies and procedures.</p>
+</li>
+<li>
+<p>Retaliation/Waiver: CloudCore may not intimidate, threaten, coerce,
+   discriminate against, or take other retaliatory action against any individual
+   for the exercise by the individual of any privacy right. The organization may
+   not require individuals to waive their privacy rights under as a condition of
+   the provision of treatment, payment, enrollment in a health plan, or
+   eligibility for benefits.</p>
+</li>
+</ol>
+<h3 id="cloudcore-platform-customer-responsibilities">CloudCore Platform Customer Responsibilities</h3>
+<p>The following requirements and guidelines shall be provided to and agreed upon
+by a client organization using CloudCore platform to host sensitive
+data such as ePHI and PII.</p>
+<p>The agreement may be in the form of a contract or acceptance of terms and
+conditions.</p>
+<ol>
+<li>
+<p>The CloudCore Customer that accesses, maintains, retains,
+   modifies, records, stores, destroys, or otherwise holds, uses, or discloses
+   unsecured sensitive data shall, without unreasonable delay and in no case
+   later than 72 hours after discovery of a breach, notify CloudCore
+   of such breach. The Customer shall provide CloudCore with the
+   following information:</p>
+<ul>
+<li>A description of what happened, including the date of the breach, the date
+  of the discovery of the breach, and the number of records and Customers
+  affected, if known.</li>
+<li>A description of the types of unsecured protected health information that
+  were involved in the breach (such as full name, Social Security number,
+  date of birth, home address, account number, etc.), if known.</li>
+<li>A description of the action taken with regard to notification of patients
+  regarding the breach.</li>
+<li>Resolution steps taken to mitigate the breach and prevent future
+  occurrences.</li>
+</ul>
+</li>
+<li>
+<p>Depending on the nature of the breach, an investigation may be conducted by
+   CloudCore or the Customer or jointly to determine the cause of breach.</p>
+</li>
+<li>
+<p>Notice to Media: Unless CloudCore is directly at fault for the
+   cause of breach, CloudCore Customers are responsible for providing
+   notice to prominent media outlets at the Customer's discretion.</p>
+</li>
+<li>
+<p>Notice to Authorities: Unless CloudCore is directly at fault for
+   the cause of breach, CloudCore Customers are responsible for
+   providing notice to the appropriate authorities, including the Secretary of
+   Health and Human Services (HHS) and your Lead Supervisory Authority (LSA)
+   under GDPR, at the Customer's discretion.</p>
+</li>
+</ol>
+<h3 id="sample-letter-to-customers-in-case-of-breach">Sample Letter to Customers in Case of Breach</h3>
+<p>[Date]</p>
+<p>[Name]
+[Name of Customer]
+[Address 1]
+[Address 2]
+[City, State Zip Code]</p>
+<p>Dear [Name of Customer]:</p>
+<p>I am writing to you from CloudCore, with important information about
+a recent breach that affects your account with us. We became aware of this
+breach on [Insert Date] which occurred on or about [Insert Date]. The breach
+occurred as follows:</p>
+<p>Describe event and include the following information:</p>
+<ul>
+<li>A brief description of what happened, including the date of the breach and the
+  date of the discovery of the breach, if known.</li>
+<li>A description of the types of unsecured protected health information that were
+  involved in the breach (such as whether full name, Social Security number,
+  date of birth, home address, account number, diagnosis, disability code or
+  other types of information were involved), if known.</li>
+<li>Any steps the Customer should take to protect themselves from potential harm
+  resulting from the breach.</li>
+<li>A brief description of what CloudCore is doing to investigate the
+  breach, to mitigate harm to individuals, and to protect against further
+  breaches.</li>
+<li>Contact procedures for individuals to ask questions or learn additional
+  information, which includes a toll-free telephone number, an e-mail address,
+  web site, or postal address.</li>
+</ul>
+<p>Other Optional Considerations:</p>
+<ul>
+<li>Recommendations to assist customer in remedying the breach.</li>
+</ul>
+<p>We will assist you in remedying the situation.</p>
+<p>Sincerely,</p>
+<p>Sec Urity<br />
+Security Officer<br />
+CloudCore  </p>
+<h3 id="list-of-contacts-for-authorities">List of Contacts for Authorities</h3>
+<h4 id="health-and-human-services">Health and Human Services</h4>
+<ul>
+<li>Phone:
+    1-877-696-6775</li>
+<li>Mailing Address: 
+    Centralized Case Management Operations
+    U.S. Department of Health and Human Services
+    200 Independence Avenue, S.W.
+    Room 509F HHH Bldg.
+    Washington, D.C. 20201</li>
+<li>Website:
+    <a href="https://ocrportal.hhs.gov">https://ocrportal.hhs.gov</a></li>
+</ul>
+<h4 id="federal-trade-commission">Federal Trade Commission</h4>
+<ul>
+<li>Phone:
+    1-877-382-4357</li>
+<li>Website:
+    <a href="https://ftccomplaintassistant.gov">https://ftccomplaintassistant.gov</a></li>
+</ul>
+<h4 id="indianapolis-metropolitan-police-department">Indianapolis Metropolitan Police Department</h4>
+<ul>
+<li>Phone:
+    317-327-3282</li>
+<li>Address:
+    50 N. Alabama St.
+    Indianapolis, IN 46204</li>
+</ul>
+<h4 id="federal-bureau-of-investigation-indianapolis-office">Federal Bureau of Investigation Indianapolis Office</h4>
+<ul>
+<li>Phone:
+    317-595-4000</li>
+<li>Address:
+    8825 Nelson B Klein Pkwy
+    Indianapolis, IN 46250</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 <a href="https://github.com/james-willett"  target="_blank" rel="noopener">James Willett</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>

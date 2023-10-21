@@ -1,0 +1,1961 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://james-willett.github.io/mkdocs-material-youtube-tutorial/policies/ir/">
+      
+      
+        <link rel="prev" href="../hr/">
+      
+      
+        <link rel="next" href="../mdm/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>Incident Response - CloudCore Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#incident-response" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CloudCore Documentation" class="md-header__button md-logo" aria-label="CloudCore Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CloudCore Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Incident Response
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      CloudCore
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../interviews/interview-CISO/" class="md-tabs__link">
+        Interviews
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Policies
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../support/ISMS/" class="md-tabs__link">
+        Support
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CloudCore Documentation" class="md-nav__button md-logo" aria-label="CloudCore Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    CloudCore Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        CloudCore
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Interviews
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Interviews
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-CISO/" class="md-nav__link">
+        interview CISO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-data-protection-officer/" class="md-nav__link">
+        Interview data protection officer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-database-administrator/" class="md-nav__link">
+        Interview database administrator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-facilities-manager/" class="md-nav__link">
+        Interview facilities manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-helpdesk/" class="md-nav__link">
+        Interview helpdesk
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-infromation-security-manager/" class="md-nav__link">
+        Interview infromation security manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-legal/" class="md-nav__link">
+        Interview legal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-network-engineer/" class="md-nav__link">
+        Interview network engineer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-system-administrator/" class="md-nav__link">
+        Interview system administrator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-typicall-employee/" class="md-nav__link">
+        Interview typicall employee
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interviews/interview-vendor/" class="md-nav__link">
+        Interview vendor
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Policies
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Policies
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        CloudCore Security Policies, Standards, and Procedures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../access/" class="md-nav__link">
+        Access
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../approved-software/" class="md-nav__link">
+        Approved software
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../approved-vendors/" class="md-nav__link">
+        Approved vendors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../asset-mgmt/" class="md-nav__link">
+        Asset Inventory Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bcdr/" class="md-nav__link">
+        Business Continuity and Disaster Recovery
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../breach/" class="md-nav__link">
+        Breach Investigation and Notification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ccm/" class="md-nav__link">
+        Configuration and Change Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compliance-audit/" class="md-nav__link">
+        Compliance Audits and External Communications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cookie-policy/" class="md-nav__link">
+        Cookie policy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-mgmt/" class="md-nav__link">
+        Data Management Policy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-protection/" class="md-nav__link">
+        Data Protection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../definitions/" class="md-nav__link">
+        Definitions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../employee-handbook/" class="md-nav__link">
+        Employee handbook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../facility/" class="md-nav__link">
+        Facility Access and Physical Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gdpr-dpa/" class="md-nav__link">
+        Gdpr dpa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hipaa-baa/" class="md-nav__link">
+        Hipaa baa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hipaa-mapping/" class="md-nav__link">
+        Hipaa mapping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hr/" class="md-nav__link">
+        HR and Personnel Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Incident Response
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Incident Response
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#policy-statements" class="md-nav__link">
+    Policy Statements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controls-and-procedures" class="md-nav__link">
+    Controls and Procedures
+  </a>
+  
+    <nav class="md-nav" aria-label="Controls and Procedures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-incident-response-team-sirt" class="md-nav__link">
+    Security Incident Response Team (SIRT)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incident-management-process" class="md-nav__link">
+    Incident Management Process
+  </a>
+  
+    <nav class="md-nav" aria-label="Incident Management Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i-identification-and-triage" class="md-nav__link">
+    I - Identification and Triage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ii-containment-technical" class="md-nav__link">
+    II - Containment (Technical)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii-eradication-technical" class="md-nav__link">
+    III - Eradication (Technical)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iv-recovery-technical" class="md-nav__link">
+    IV - Recovery (Technical)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v-post-incident-analysis-technical-and-non-technical" class="md-nav__link">
+    V - Post-Incident Analysis (Technical and Non-Technical)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#periodic-evaluation" class="md-nav__link">
+    Periodic Evaluation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incident-categories-and-playbooks" class="md-nav__link">
+    Incident Categories and Playbooks
+  </a>
+  
+    <nav class="md-nav" aria-label="Incident Categories and Playbooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#classification" class="md-nav__link">
+    Classification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#severity-levels" class="md-nav__link">
+    Severity Levels:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-procedures-cat-1-general-incident" class="md-nav__link">
+    Response Procedures: Cat 1 – General Incident
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-procedures-cat-2-internal-infrastructure-incident-response" class="md-nav__link">
+    Response Procedures: Cat 2 – Internal Infrastructure Incident Response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-procedures-cat-3-malware-outbreak" class="md-nav__link">
+    Response Procedures: Cat 3 – Malware outbreak
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-procedures-cat-4-external-web-attacks-and-dosddos-attacks" class="md-nav__link">
+    Response Procedures: Cat 4 – External web attacks and DoS/DDoS attacks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-procedures-cat-5-social-engineering" class="md-nav__link">
+    Response Procedures: Cat 5 – Social Engineering
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-procedures-cat-6-data-leakage" class="md-nav__link">
+    Response Procedures: Cat 6 – Data Leakage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-procedures-special-cases" class="md-nav__link">
+    Response Procedures: Special Cases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emergency-operations-mode" class="md-nav__link">
+    Emergency Operations Mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabletop-exercise" class="md-nav__link">
+    Tabletop Exercise
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incident-tracking-and-records" class="md-nav__link">
+    Incident Tracking and Records
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mdm/" class="md-nav__link">
+        Mobile Device Security and Storage Media Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model/" class="md-nav__link">
+        Security Architecture and Operating Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nist-mapping/" class="md-nav__link">
+        Nist mapping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policy-mgmt/" class="md-nav__link">
+        Policy Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../privacy-policy/" class="md-nav__link">
+        Privacy policy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../privacy/" class="md-nav__link">
+        Privacy and Consent
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../program/" class="md-nav__link">
+        Security Program Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rar/" class="md-nav__link">
+        Roles, Responsibilities and Training
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref/" class="md-nav__link">
+        Addendum and References
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../risk-mgmt/" class="md-nav__link">
+        Risk Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdlc/" class="md-nav__link">
+        Secure Software Development and Product Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-audit/" class="md-nav__link">
+        System Audits, Monitoring and Assessments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../threat/" class="md-nav__link">
+        Threat Detection and Prevention
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vendor/" class="md-nav__link">
+        Third Party Security, Vendor Risk Management and Systems/Services Acquisition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vuln-mgmt/" class="md-nav__link">
+        Vulnerability Management
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Support
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/ISMS/" class="md-nav__link">
+        CloudCore Networks Information Security Management System
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/Preparing%20ISO%2027001/" class="md-nav__link">
+        Preparing ISO 27001
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/Risk%20Register/" class="md-nav__link">
+        Risk Register
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/Training/" class="md-nav__link">
+        Training
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/network-logical/" class="md-nav__link">
+        Network logical
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/org-chart-names-full/" class="md-nav__link">
+        Org chart names full
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="incident-response">Incident Response</h1>
+<p><code>2023.1</code></p>
+<p>CloudCore implements an information security incident response process to
+consistently detect, respond, and report incidents, minimize loss and
+destruction, mitigate the weaknesses that were exploited, and restore
+information system functionality and business continuity as soon as possible.</p>
+<p>The incident response process addresses:</p>
+<ul>
+<li>Continuous monitoring of threats through intrusion detection systems (IDS) and
+  other monitoring applications;</li>
+<li>Establishment of an information security incident response team;</li>
+<li>Establishment of procedures to respond to media inquiries;</li>
+<li>Establishment of clear procedures for identifying, responding, assessing,
+  analyzing, and follow-up of information security incidents;</li>
+<li>Workforce training, education, and awareness on information security incidents
+  and required responses; and</li>
+<li>Facilitation of clear communication of information security incidents with
+  internal, as well as external, stakeholders</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These policies were adapted from work by the <a href="http://hipaacow.org/wp-content/uploads/2015/02/HCR-Security-Incident-Response-FINAL-12.18.14.doc">HIPAA Collaborative of Wisconsin Security Networking Group</a>. Refer to the linked document for additional copyright information.</p>
+</div>
+<h2 id="policy-statements">Policy Statements</h2>
+<p>CloudCore policy requires that:</p>
+<p>(a) All computing environments and systems must be monitored in accordance to
+the policies and procedures specified in the following CloudCore policies and
+procedures:</p>
+<ul>
+<li>Auditing</li>
+<li>System Access</li>
+<li>End-user Computing and Acceptable Use</li>
+</ul>
+<p>(b) All alerts must be reviewed to identify security incidents.</p>
+<p>(c) Incident response procedures are invoked upon discovery of a valid security
+incident.</p>
+<p>(d) Incident response team and management must comply with any additional
+requests by law enforcement in the event of criminal investigation or national
+security, including but not limited to warranted data requests, subpoenas, and
+breach notifications.</p>
+<h2 id="controls-and-procedures">Controls and Procedures</h2>
+<h3 id="security-incident-response-team-sirt">Security Incident Response Team (SIRT)</h3>
+<p>The Security Incident Response Team (SIRT) is responsible for:</p>
+<ul>
+<li>Review, analyze and log of all received reports and track their statuses.</li>
+<li>Performing investigations, creating and executing action plans, post-incident
+  activities.</li>
+<li>Collaboration with law enforcement agencies.</li>
+</ul>
+<p>Current members of the CloudCore SIRT:</p>
+<ul>
+<li>Security and Privacy Officer</li>
+<li>Security Engineers</li>
+<li>Head of Engineering</li>
+<li>DevOps and Production Support Team</li>
+</ul>
+<h3 id="incident-management-process">Incident Management Process</h3>
+<p>The CloudCore incident response process follows the process recommended by
+<a href="https://www.sans.org">SANS</a>, an industry leader in security. Process flows are
+a direct representation of the SANS process which can be found in <a href="sections/incident-flowchart.pdf">this
+document</a>.</p>
+<p>CloudCore's incident response classifies security-related events into the
+following categories:</p>
+<ul>
+<li>
+<p><strong>Events</strong> - Any observable computer security-related occurrence in a system
+  or network with a negative consequence. Examples:</p>
+<ul>
+<li>Hardware component failing causing service outages.</li>
+<li>Software error causing service outages.</li>
+<li>General network or system instability.</li>
+</ul>
+</li>
+<li>
+<p><strong>Precursors</strong> - A sign that an incident may occur in the future. Examples:</p>
+<ul>
+<li>Monitoring system showing unusual behavior.</li>
+<li>Audit log alerts indicated several failed login attempts.</li>
+<li>Suspicious emails targeting specific CloudCore staff members with
+  administrative access to production systems.</li>
+<li>
+<p>Alerts raised from a security control source based on its monitoring
+  policy, such as</p>
+<ul>
+<li>Okta (user authentication activities)</li>
+<li>Threat Stack (AWS Cloudtrail events or system agent activities)</li>
+<li>Dome9 (cloud services configuration or access alerts)</li>
+<li>Carbon Black Cb Defense (malware and endpoint events)</li>
+<li>Syslog events from servers</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Indications</strong> - A sign that an incident may have occurred or may be
+  occurring at the present time. Examples:</p>
+<ul>
+<li>Alerts for modified system files or unusual system accesses.</li>
+<li>Antivirus alerts for infected files or devices.</li>
+<li>Excessive network traffic directed at unexpected geographic locations.</li>
+</ul>
+</li>
+<li>
+<p><strong>Incidents</strong> - A confirmed attack / indicator of compromise or a validated
+  violation of computer security policies or acceptable use policies, often
+  resulting in data breaches. Examples:</p>
+<ul>
+<li>Unauthorized disclosure of sensitive data.</li>
+<li>Unauthorized change or destruction of sensitive data.</li>
+<li>A data breach accomplished by an internal or external entity.</li>
+<li>A Denial-of-Service (DoS) attack causing a critical service to become
+  unreachable.</li>
+</ul>
+</li>
+</ul>
+<p>CloudCore employees must report any unauthorized or suspicious activity seen on
+production systems or associated with related communication systems (such as
+email or Slack). In practice this means keeping an eye out for security events,
+and letting the Security team know about any observed precursors or indications
+as soon as they are discovered.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Incidents of a severity/impact rating higher than <strong>MINOR</strong> shall trigger the
+following response process, or as defined more specifically in the <strong>Incident
+Categories and Playbooks</strong> section.</p>
+</div>
+<h4 id="i-identification-and-triage">I - Identification and Triage</h4>
+<ol>
+<li>
+<p>Immediately upon observation CloudCore members report suspected and known
+   Events, Precursors, Indications, and Incidents in one of the following ways:</p>
+<ol>
+<li>Direct report to management, the Security Officer, Privacy Officer, or
+   other;</li>
+<li>Email;</li>
+<li>Phone call;</li>
+<li>Submit an incident report online via
+   <a href="">CloudCore Internal ServiceDesk</a>;</li>
+<li>Secure chat; or</li>
+<li>Anonymously through workforce members desired channels.</li>
+</ol>
+</li>
+<li>
+<p>The individual receiving the report facilitates the collection of additional
+   information about the incident, as needed, and notifies the Security Officer
+   (if not already done).</p>
+</li>
+<li>
+<p>The Security Officer determines if the issue is an Event, Precursor,
+   Indication, or Incident.</p>
+</li>
+<li>
+<p>If the issue is an event, indication, or precursor the Security Officer
+      forwards it to the appropriate resource for resolution.</p>
+<ol>
+<li>Non-Technical Event (minor infringement): the Security Officer of
+     designee creates an appropriate issue in  and further investigates
+     the incident as needed.</li>
+<li>Technical Event: Assign the issue to an technical resource for
+     resolution. This resource may also be a contractor or outsourced
+     technical resource, in the event of a lack of resource or expertise in
+     the area.</li>
+</ol>
+</li>
+<li>
+<p>If the issue is a security incident the Security Officer activates the
+      Security Incident Response Team (SIRT) and notifies senior leadership by
+      email.</p>
+<ol>
+<li>If a non-technical security incident is discovered the SIRT completes
+      the investigation, implements preventative measures, and resolves the
+      security incident.</li>
+<li>Once the investigation is completed, progress to Phase V, Follow-up.</li>
+<li>If the issue is a technical security incident, commence to Phase II:
+      Containment.</li>
+<li>The Containment, Eradication, and Recovery Phases are highly
+      technical. It is important to have them completed by a highly
+      qualified technical security resource with oversight by the SIRT team.</li>
+<li>Each individual on the SIRT and the technical security resource
+      document all measures taken during each phase, including the start and
+      end times of all efforts.</li>
+<li>
+<p>The lead member of the SIRT team facilitates initiation of an Incident
+      ticket in  Security Project and documents all findings and details
+      in the ticket.</p>
+<ul>
+<li>The intent of the Incident ticket is to provide a summary of all
+     events, efforts, and conclusions of each Phase of this policy and
+     procedures.</li>
+<li>Each Incident ticket should contain sufficient details following
+     the <a href="https://www.sans.org/score/incident-forms/">SANS Security Incident Forms templates</a>,
+     as appropriate.</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>The Security Officer, Privacy Officer, or CloudCore representative appointed
+   notifies any affected Customers and Partners. If no Customers and Partners
+   are affected, notification is at the discretion of the Security and Privacy
+   Officer.</p>
+</li>
+<li>
+<p>In the case of a threat identified, the Security Officer is to form a team to
+   investigate and involve necessary resources, both internal to CloudCore and
+   potentially external.</p>
+</li>
+</ol>
+<h4 id="ii-containment-technical">II - Containment (Technical)</h4>
+<p>In this Phase, CloudCore's engineers and security team attempts to contain the
+security incident. It is extremely important to take detailed notes during the
+security incident response process. This provides that the evidence gathered
+during the security incident can be used successfully during prosecution, if
+appropriate.</p>
+<ol>
+<li>Review any information that has been collected by the Security team or any
+   other individual investigating the security incident.</li>
+<li>Secure the blast radius (i.e. a physical or logical network perimeter or
+   access zone).</li>
+<li>
+<p>Perform the following forensic analysis preparation, as needed:</p>
+<ol>
+<li>Securely connect to the affected system over a trusted connection.</li>
+<li>Retrieve any volatile data from the affected system.</li>
+<li>Determine the relative integrity and the appropriateness of backing the
+   system up.</li>
+<li>As necessary, take a snapshot of the disk image for further forensic;
+   and if appropriate, back up the system.</li>
+<li>Change the password(s) to the affected system(s).</li>
+<li>Determine whether it is safe to continue operations with the affect
+   system(s).</li>
+<li>If it is safe, allow the system to continue to function; and move to
+   Phase V, Post Incident Analysis and Follow-up.</li>
+<li>If it is NOT safe to allow the system to continue operations, discontinue
+   the system(s) operation and move to Phase III, Eradication.</li>
+<li>The individual completing this phase provides written communication to
+   the SIRT.</li>
+</ol>
+</li>
+<li>
+<p>Complete any documentation relative to the security incident containment on the
+   Incident ticket, using
+   <a href="https://www.sans.org/media/score/incident-forms/IH-Containment.pdf">SANS IH Containment Form</a>
+   as a template.</p>
+</li>
+<li>Continuously apprise Senior Management of progress.</li>
+<li>Continue to notify affected Customers and Partners with relevant updates as
+   needed.</li>
+</ol>
+<h4 id="iii-eradication-technical">III - Eradication (Technical)</h4>
+<p>The Eradication Phase represents the SIRT's effort to remove the cause, and the
+resulting security exposures, that are now on the affected system(s).</p>
+<ol>
+<li>Determine symptoms and cause related to the affected system(s).</li>
+<li>
+<p>Strengthen the defenses surrounding the affected system(s), where possible (a
+   risk assessment may be needed and can be determined by the Security Officer).
+   This may include the following:</p>
+<ol>
+<li>An increase in network perimeter defenses.</li>
+<li>An increase in system monitoring defenses.</li>
+<li>Remediation ("fixing") any security issues within the affected system,
+   such as removing unused services/general host hardening techniques.</li>
+</ol>
+</li>
+<li>
+<p>Conduct a detailed vulnerability assessment to verify all the holes/gaps that
+   can be exploited have been addressed.</p>
+<ol>
+<li>If additional issues or symptoms are identified, take appropriate
+   preventative measures to eliminate or minimize potential future
+   compromises.</li>
+</ol>
+</li>
+<li>
+<p>Update the Incident ticket with Eradication details, using
+   <a href="https://www.sans.org/media/score/incident-forms/IH-Eradication.pdf">SANS IH Eradication Form</a>
+   as a template.</p>
+</li>
+<li>Update the documentation with the information learned from the vulnerability
+   assessment, including the cause, symptoms, and the method used to fix the
+   problem with the affected system(s).</li>
+<li>Apprise Senior Management of the progress.</li>
+<li>Continue to notify affected Customers and Partners with relevant updates as
+   needed.</li>
+<li>Move to Phase IV, Recovery.</li>
+</ol>
+<h4 id="iv-recovery-technical">IV - Recovery (Technical)</h4>
+<p>The Recovery Phase represents the SIRT's effort to restore the affected
+system(s) back to operation after the resulting security exposures, if any, have
+been corrected.</p>
+<ol>
+<li>
+<p>The technical team determines if the affected system(s) have been changed in
+   any way.</p>
+<ol>
+<li>If they have, the technical team restores the system to its proper,
+   intended functioning ("last known good").</li>
+<li>Once restored, the team validates that the system functions the way it
+   was intended/had functioned in the past. This may require the involvement
+   of the business unit that owns the affected system(s).</li>
+<li>If operation of the system(s) had been interrupted (i.e., the system(s)
+   had been taken offline or dropped from the network while triaged),
+   restart the restored and validated system(s) and monitor for behavior.</li>
+<li>If the system had not been changed in any way, but was taken offline
+   (i.e., operations had been interrupted), restart the system and monitor
+   for proper behavior.</li>
+<li>Update the documentation with the detail that was determined during this
+   phase.</li>
+<li>Apprise Senior Management of progress.</li>
+<li>Continue to notify affected Customers and Partners with relevant updates
+   as needed.</li>
+<li>Move to Phase V, Follow-up.</li>
+</ol>
+</li>
+</ol>
+<h4 id="v-post-incident-analysis-technical-and-non-technical">V - Post-Incident Analysis (Technical and Non-Technical)</h4>
+<p>The Follow-up phase represents the review of the security incident to look for
+"lessons learned" and to determine whether the process that was taken could have
+been improved in any way. It is recommended all security incidents be reviewed
+shortly after resolution to determine where response could be improved.
+Timeframes may extend to one to two weeks post-incident.</p>
+<ol>
+<li>Responders to the security incident (SIRT Team and technical security
+   resource) meet to review the documentation collected during the security
+   incident.</li>
+<li>
+<p>A "lessons learned" section is written and attached to Incident ticket.</p>
+<ol>
+<li>Evaluate the cost and impact of the security incident to CloudCore using
+   the documents provided by the SIRT and the technical security resource.</li>
+<li>
+<p>Determine what could be improved. This may include:</p>
+<ul>
+<li>Systems and processes adjustments</li>
+<li>Awareness training and documentation</li>
+<li>Implementation of additional controls</li>
+</ul>
+</li>
+<li>
+<p>Communicate these findings to Senior Management for approval and for
+   implementation of any recommendations made post-review of the security
+   incident.</p>
+</li>
+<li>Carry out recommendations approved by Senior Management; sufficient
+   budget, time and resources should be committed to this activity.</li>
+</ol>
+</li>
+<li>
+<p>Ensure all incident related information is recorded and retained as described
+   in CloudCore Auditing requirements and Data Retention standards.</p>
+</li>
+<li>Close the security incident.</li>
+</ol>
+<h4 id="periodic-evaluation">Periodic Evaluation</h4>
+<p>It is important to note that the processes surrounding security incident
+response should be periodically reviewed and evaluated for effectiveness. This
+also involves appropriate training of resources expected to respond to security
+incidents, as well as the training of the general population regarding the
+CloudCore's expectation for them, relative to security responsibilities. The
+incident response plan is tested annually.</p>
+<h3 id="incident-categories-and-playbooks">Incident Categories and Playbooks</h3>
+<ul>
+<li>The IRT reviews and analyzes on the security events on as part of its daily
+  operations.</li>
+<li>Based on the initial analysis, an event may be dismissed due to false
+  positives, normal business operations, exceptions that are already in place,
+  permitted per policy, or duplicates. An audit trail will be kept for event
+  dismissal.</li>
+<li>A valid security event may be upgrade to a security incident. Upon which, an
+  incident classification and severity is assigned as specified below.</li>
+<li>Record of the decision must be stored with details on date(s), name(s) of the
+  person(s) conducted assessment.</li>
+<li>A containment, eradication and recovery procedure is triggered based on the
+  Category classification of the incident.</li>
+<li>In addition to the general incident management procedures previously
+  described, one or more of the following playbooks are consulted based on the
+  classification of a particular incident.</li>
+</ul>
+<h4 id="classification">Classification</h4>
+<ul>
+<li>
+<p><strong>Category 1</strong> – General Incidents, including physical security incidents</p>
+</li>
+<li>
+<p><strong>Category 2</strong> – Attacks on internal corporate infrastructure, including
+  network, hardware, software</p>
+</li>
+<li>
+<p><strong>Category 3</strong> – Malware</p>
+</li>
+<li>
+<p><strong>Category 4</strong> – Attacks on external facing assets, such as website, web
+  applications, web services. Including denial of service attacks.</p>
+</li>
+<li>
+<p><strong>Category 5</strong> – Human targets, social engineering, phishing, etc.</p>
+</li>
+<li>
+<p><strong>Category 6</strong> – Breach/leakage of critical or confidential data</p>
+</li>
+</ul>
+<h4 id="severity-levels">Severity Levels:</h4>
+<ul>
+<li>
+<p><strong>Critical</strong> – incident that involves immediate and significant interruption
+  to business operations and/or breach of critical or confidential data</p>
+</li>
+<li>
+<p><strong>Major</strong> – incident that involves immediate interruption to business
+  operations but will not likely result in immediate data breach</p>
+</li>
+<li>
+<p><strong>Minor</strong> – all other confirmed incidents</p>
+</li>
+</ul>
+<h4 id="response-procedures-cat-1-general-incident">Response Procedures: Cat 1 – General Incident</h4>
+<ul>
+<li>Prioritize handling the incident based on functional impact, informational
+  effort, recoverability efforts and other relevant factors</li>
+<li>Report the incident to the appropriate internal personnel and external
+  organizations</li>
+<li>Acquire, preserve, secure, and document evidence</li>
+<li>Contain the incident</li>
+<li>
+<p>Eradicate the incident</p>
+<ul>
+<li>Identify and mitigate all factors that enabled the incident to occur</li>
+<li>Remove any results of malicious activity</li>
+</ul>
+</li>
+<li>
+<p>Recover from the incident</p>
+<ul>
+<li>Restore affected systems and business functions</li>
+<li>Implement additional preventive measures</li>
+</ul>
+</li>
+</ul>
+<h4 id="response-procedures-cat-2-internal-infrastructure-incident-response">Response Procedures: Cat 2 – Internal Infrastructure Incident Response</h4>
+<p>Depending on the type of event, use the following incident response playbooks:</p>
+<ul>
+<li><a href="https://incidentresponse.com/playbooks/unauthorized-access">Unauthorized
+  Access</a></li>
+<li><a href="https://incidentresponse.com/playbooks/root-access">Root Access</a></li>
+<li><a href="https://incidentresponse.com/playbooks/elevation-of-privilege">Elevation of
+  Privilege</a></li>
+<li><a href="https://incidentresponse.com/playbooks/improper-computer-usage">Improper
+  Usage</a></li>
+</ul>
+<h4 id="response-procedures-cat-3-malware-outbreak">Response Procedures: Cat 3 – Malware outbreak</h4>
+<p>Depending on the agent type, follow these incident response playbooks:</p>
+<ul>
+<li><a href="https://incidentresponse.com/playbooks/malware-outbreak">Malware</a></li>
+<li><a href="https://incidentresponse.com/playbooks/virus-outbreak">Virus</a></li>
+</ul>
+<h4 id="response-procedures-cat-4-external-web-attacks-and-dosddos-attacks">Response Procedures: Cat 4 – External web attacks and DoS/DDoS attacks</h4>
+<ul>
+<li>Mobilize the Engineering team to secure systems and ensure Business
+  Continuity</li>
+<li>Conduct a thorough investigation of the incident</li>
+<li>Manage public relationships</li>
+<li>Address legal and regulatory requirements</li>
+<li>For a DDOS attack, follow the <a href="https://incidentresponse.com/playbooks/ddos">DDOS
+  playbook</a></li>
+<li>Trigger BCDR if necessary</li>
+</ul>
+<h4 id="response-procedures-cat-5-social-engineering">Response Procedures: Cat 5 – Social Engineering</h4>
+<p>Follow the <a href="https://incidentresponse.com/playbooks/phishing">Phishing incident response
+playbook</a></p>
+<h4 id="response-procedures-cat-6-data-leakage">Response Procedures: Cat 6 – Data Leakage</h4>
+<p><a href="https://incidentresponse.com/playbooks/data-theft">Data Theft incident response
+playbook</a> outlines the
+response instructions</p>
+<h4 id="response-procedures-special-cases">Response Procedures: Special Cases</h4>
+<p>At least the following two special cases are considered when responding to an
+incident:</p>
+<p><strong>PHI/ePHI:</strong></p>
+<p>When a data breach occurs that involves unsecured PHI or ePHI, breach
+notifications must be performed according to HIPAA regulation requirements,
+including each individual impacted and as applicable, the covered entity and OCR
+(see Appendix for additional details).</p>
+<p>If the breach or potential breach impacts PHI/ePHI that belongs to a Covered
+Entity to which CloudCore is a Business Associate of, the IRT and management team
+will inform the Covered Entity per the timeframe and contact method established
+in the Business Associate Agreement or as described in <a href="../breach/">§Breach Notification</a>.
+HIPAA §164.410(b)</p>
+<p><strong>Criminal Activities:</strong></p>
+<p>In the event of an attack that involves suspected criminal activities, the IRT
+and management team will inform law enforcement.</p>
+<p><strong>Insider Threat:</strong></p>
+<p>Members of the cross-discipline insider threat incident handling team include:</p>
+<ul>
+<li>Security and Privacy Officer,</li>
+<li>COO, and</li>
+<li>Head of Engineering as appropriate.</li>
+</ul>
+<h3 id="emergency-operations-mode">Emergency Operations Mode</h3>
+<p>If an incident constitutes an emergency – for example, a detected cyberattack
+that impacts production systems – CloudCore plans to operate in a “read-only”
+mode, to continue to provide customers access to their data. All write access is
+temporarily blocked and data upload is paused until the emergency is resolved.
+This is accomplished by updating the access policy in production AWS
+environments.</p>
+<p>In emergency operations mode, temporary access may be granted to security and/or
+engineering team to access the production environments to perform forensics,
+root cause analysis, eradication/remediation, or other necessary activities for
+incident recovery.</p>
+<h3 id="tabletop-exercise">Tabletop Exercise</h3>
+<p>At least once per year, CloudCore security and engineering teams
+jointly performs a Red Team exercise and/or a simulated "drill" of an emergency
+cyberattack that results in one or more <strong>CRITICAL</strong> incidents. Depending on the
+type of exercise, the duration may range from 2-4 hours (simulated "drill") to a
+couple of weeks (full Red Teaming exercise).</p>
+<p>The exercise will follow a cyberattack playbook. It may be conducted with all
+internal resources or with the help of an external security consulting firm. The
+goal of the exercise is to ensure all parties involved receive proper training
+to handle an actual incident and to test out the documented procedures in order
+to identify gaps ahead of a real event. Senior leadership team may be invited to
+participate in the "drill" depending on the nature of the exercise or receive a
+readout of the outcome.</p>
+<h3 id="incident-tracking-and-records">Incident Tracking and Records</h3>
+<p>A record is created for each reported incident in Jira. Each incident
+record contains details about the incident capturing the incident attributes
+and progression, including the following as applicable:</p>
+<ul>
+<li>Summary</li>
+<li>Description</li>
+<li>Impact</li>
+<li>Priority / Urgency</li>
+<li>Categorization</li>
+<li>Analysis Notes and Comments</li>
+<li>Cause / Determination</li>
+<li>Outcome / Resolution</li>
+<li>Lessons Learned</li>
+</ul>
+<p>If a more detailed post-mortem is applicable, the Security and/or DevOps team
+will create the write-up and link it in the incident record.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 <a href="https://github.com/james-willett"  target="_blank" rel="noopener">James Willett</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>
